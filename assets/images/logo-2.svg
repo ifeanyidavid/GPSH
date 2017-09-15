@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="1522 422 168 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #df3939;
+      }
+
+      .cls-2 {
+        fill: #585a5d;
+        font-size: 36px;
+        font-family: Comfortaa-Bold, Comfortaa;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        fill: #3970df;
+      }
+
+      .cls-4 {
+        fill: #39df87;
+      }
+
+      .cls-5 {
+        fill: #fff12d;
+      }
+    </style>
+  </defs>
+  <g id="Group_6" data-name="Group 6" transform="translate(1367 -180)">
+    <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-1" width="24" height="24" transform="translate(155 650)"/>
+    <g id="Group_4" data-name="Group 4">
+      <text id="giftplush" class="cls-2" transform="translate(155 634)"><tspan x="0" y="0">giftplush</tspan></text>
+      <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-3" width="24" height="24" transform="translate(203 650)"/>
+      <rect id="Rectangle_6" data-name="Rectangle 6" class="cls-4" width="24" height="24" transform="translate(251 650)"/>
+      <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-5" width="24" height="24" transform="translate(299 650)"/>
+    </g>
+  </g>
+</svg>
