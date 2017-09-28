@@ -10,11 +10,51 @@
     <link rel="stylesheet" href="assets/css/flickity.min.css" media="screen">
 </head>
 <body>
-    <input type="checkbox" id="sidebarToggler">
 
+    <!-- Sign in modal -->
+    <input type="checkbox" id="loginModalTrigger" class="hidden-sm">
+    <div class="loginModalOverlay hidden-sm">
+        <div class="loginModal">
+            <label for="loginModalTrigger" class="close-label"><img src="assets/images/close.svg" alt=""></label>
+            <h1>Login to Giftplush</h1>
+            <input type="text" placeholder="Email address">
+            <input type="text" placeholder="Password">
+            <button type="submit" class="signin">Sign in</button>
+            <div class="xdf">
+                <p>Remember me?</p>
+                <span>Forgot Password</span>
+            </div>
+            <p class="or">or</p>
+            <button type="submit" class="facebook-signin"><img src="assets/images/facebook-white.svg" alt=""> Sign in with Facebook</button>
+            <hr>
+            <p class="member-signup">Not a member yet? <span>Sign up</span></p>
+        </div>
+    </div>
+
+    <!-- Sign up modal -->
+    <input type="checkbox" id="signupModalTrigger" class="hidden-sm">
+    <div class="signupModalOverlay hidden-sm">
+        <div class="signupModal">
+            <label for="signupModalTrigger" class="close-label"><img src="assets/images/close.svg" alt=""></label>
+            <h1>Join Giftplush</h1>
+            <input type="text" placeholder="Email address">
+            <input type="text" placeholder="Password">
+            <button type="submit" class="signin">Join</button>
+            <p class="or">or</p>
+            <button type="submit" class="facebook-signin"><img src="assets/images/facebook-white.svg" alt=""> Sign up with Facebook</button>
+            <hr>
+            <p class="member-signup">Already a member? <span>Sign in</span></p>
+        </div>
+    </div>
+
+    <input type="checkbox" id="sidebarToggler">
     <div class="page-wrap">
 
-        <label for="sidebarToggler" class="menu-toggle hidden-md"><img src="assets/images/toggle-icon.svg" alt="toggle-icon"></label>
+        <label for="sidebarToggler" class="menu-toggle hidden-md">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
         <div class="page-content">
 
@@ -27,8 +67,8 @@
                     <div class="top-right-nav hidden-sm">
                         <span><a href="#">Create a wishlist</a></span>
                         <span><a href="#">Become a merchant</a></span>
-                        <span><a href="#">Sign up</a></span>
-                        <span><a href="#">Login</a></span>
+                        <span><a href="#"><label for="signupModalTrigger">Signup</label></a></span>
+                        <span><a href="#"><label for="loginModalTrigger">Login</label></a></span>
                     </div>
                 </div>
                 <div class="bottom-nav hidden-sm">
@@ -50,7 +90,7 @@
                             </ul>
                         </label>
                     </ul>
-                    <ul>
+                    <!-- <ul>
                         <label><a href="">Popular brands</a><i><img src="assets/images/caret-dark.svg" alt="caret"></i>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Home & Garden</a></li>
@@ -67,27 +107,26 @@
                                 <li><a href="#">Students</a></li>
                             </ul>
                         </label>
-                    </ul>
-                    <ul><a href="">Explore collections</a></ul>
+                    </ul> -->
+                    <ul><a href="">Top collections</a></ul>
                     <!-- <ul><a href="">Popular brands</a><i><img src="assets/images/caret-dark.svg" alt="caret"></i></ul>
                     <ul><a href="">Explore collections</a><i><img src="assets/images/caret-dark.svg" alt="caret"></i></ul> -->
                 </div>
             </nav>
 
             <div class="hero-section">
-                <h1>Discover digital vouchers from your favorite brands all in one place</h1>
+                <h1>Making it easier than ever to get digital vouchers for just about anything</h1>
                 <!-- <p>Choose from over 30,000 vouchers from retailers across Nigeria listed</p> -->
 
                 <div class="search-container">
-                    <input type="text" placeholder="Search for brands/vouchers" class="search__box">
-                    <button><img src="assets/images/search.svg" alt="svg"></button>
-                </div>
-
-                <div class="popular-search-container">
-                    <span class="popular-searches">Popular searches</span>
-                    <div class="searches">
-                        <span>Spar vouchers</span><span>Slot vouchers</span><span>Sony vouchers</span>
-                    </div>
+                    <input type="text" placeholder="What are you looking for?" id="search-box" class="search__box">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon">
+                            <g class="nc-icon-wrapper fillCurrentcolor">
+                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                            </g>
+                        </svg>
+                    </button>
                 </div>
             </div>
 
@@ -103,44 +142,99 @@
                             <div class="carousel-cell">
                                 <img src="assets/images/1.jpg" alt="">
                                 <div class="details">
-                                        <h3>Voucher name</h3>
-                                        <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
-                                        <span class="vouchers-sold">42 vouchers sold this week</span>
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
                                 </div>
                                 
                             </div>
                             <div class="carousel-cell">
                                 <img src="assets/images/2.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
                             </div>
                             <div class="carousel-cell">
                                 <img src="assets/images/3.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
                             </div>
                             <div class="carousel-cell">
                                 <img src="assets/images/4.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
                             </div>
                             <div class="carousel-cell">
                                 <img src="assets/images/5.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
                             </div>
                             <div class="carousel-cell">
                                 <img src="assets/images/4.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
                             </div>
                             <div class="carousel-cell">
                                 <img src="assets/images/3.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
                             </div>
                             <div class="carousel-cell">
                                 <img src="assets/images/2.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
                             </div>
                             <div class="carousel-cell">
                                 <img src="assets/images/1.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
                             </div>
                             <div class="carousel-cell">
                                 <img src="assets/images/5.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
                             </div>
                             <div class="carousel-cell">
                                 <img src="assets/images/4.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
                             </div>
                             <div class="carousel-cell">
                                 <img src="assets/images/3.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
                             </div>
                         </div>
 
@@ -151,23 +245,106 @@
                             <h1>Recommended vouchers</h1>
                             <span class="see-all">See all</span>
                         </div>
-                        <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": true, "wrapAround": true, "imagesLoaded": true, "draggable": true, "pageDots": false, "setGallerySize": false, "adaptive": true, "resize": false, "setGallerySize": false }'>
-                            <div class="carousel-cell"><img src="assets/images/1.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/2.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/3.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/4.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/5.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/4.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/3.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/2.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/1.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/5.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/4.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/3.jpg" alt=""></div>
+                        <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": true, "wrapAround": true, "imagesLoaded": true, "draggable": true, "pageDots": false, "setGallerySize": false, "adaptive": true, "resize": false, "setGallerySize": false, "selectedAttraction": 0.5, "friction": 1 }'>
+                            <div class="carousel-cell">
+                                <img src="assets/images/1.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/2.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/3.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/4.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/5.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/4.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/3.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/2.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/1.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/5.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/4.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/3.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
-
+  
                     <div class="ad">
                         <img src="assets/images/ad.png" alt="ad">
                     </div>
@@ -177,72 +354,109 @@
                             <h1>Recommended vouchers</h1>
                             <span class="see-all">See all</span>
                         </div>
-                        <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": true, "wrapAround": true, "imagesLoaded": true, "draggable": true, "pageDots": false, "setGallerySize": false, "adaptive": true, "resize": false, "setGallerySize": false }'>
-                            <div class="carousel-cell"><img src="assets/images/1.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/2.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/3.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/4.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/5.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/4.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/3.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/2.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/1.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/5.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/4.jpg" alt=""></div>
-                            <div class="carousel-cell"><img src="assets/images/3.jpg" alt=""></div>
+                        <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": true, "wrapAround": true, "imagesLoaded": true, "draggable": true, "pageDots": false, "setGallerySize": false, "adaptive": true, "resize": false, "setGallerySize": false, "selectedAttraction": 0.5, "friction": 1 }'>
+                            <div class="carousel-cell">
+                                <img src="assets/images/1.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/2.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/3.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/4.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/5.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/4.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/3.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/2.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/1.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/5.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/4.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <img src="assets/images/3.jpg" alt="">
+                                <div class="details">
+                                    <h3>Voucher name</h3>
+                                    <span class="item-desc">Lorem ipsum dolor sit amet, consectetur.</span>
+                                    <span class="vouchers-sold">42 vouchers sold this week</span>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="popular-brands-section">
-                <h1>Popular brands</h1>
-                <div class="brands">
-                    <div class="brand-col">
-                        <a href="#">Airbnb</a>
-                        <a href="#">Amazon</a>
-                        <a href="#">BHS</a>
-                        <a href="#">Boden</a>
-                        <a href="#">Debenhams</a>
-                    </div>
-                    <div class="brand-col">
-                        <a href="#">Currys PC World</a>
-                        <a href="#">Frankie & Benny's</a>
-                        <a href="#">First Choice</a>
-                        <a href="#">John Lewis</a>
-                        <a href="#">Joules</a>
-                    </div>
-                    <div class="brand-col">
-                        <a href="#">Marks & Spencer</a>
-                        <a href="#">Matalan</a>
-                        <a href="#">New Look</a>
-                        <a href="#">National Trust</a>
-                        <a href="#">New Look</a>
-                    </div>
-                    <div class="brand-col">
-                        <a href="#">Pizza Express</a>
-                        <a href="#">Ocado</a>
-                        <a href="#">SportsDirect.com</a>
-                        <a href="#">Sky</a>
-                        <a href="#">Virgin Media</a>
-                    </div>
-                    <div class="brand-col">
-                        <a href="#">Virgin Experience Days</a>
-                        <a href="#">ao.com</a>
-                        <a href="#">Argos</a>
-                        <a href="#">Boots.com</a>
-                        <a href="#">Dorothy Perkins</a>
-                    </div>
-                    <div class="brand-col">
-                        <a href="#">Homebase</a>
-                        <a href="#">Laithwaite's Wine</a>
-                        <a href="#">Monica Vinader</a>
-                        <a href="#">Nike</a>
-                        <a href="#">Brand</a>
-                    </div>
-                </div>
-            </div> -->
 
             <div class="newsletter">
                 <h1>Get the best deals</h1>
@@ -341,10 +555,21 @@
                     <li><a href="#">Students</a></li>
                 </ul>
             </ul>
-
             <li><a href="#">Become a merchant</a></li>
         </nav>
 
-        <script src="assets/js/flickity.pkgd.min.js"></script>
+<script src="assets/js/flickity.pkgd.min.js"></script>
+<script src="assets/js/typed.min.js"></script>
+<script>
+    var search = new Typed('#search-box', {
+        strings: ['Shoprite vouchers', 'Spar vouchers', 'Dominos vouchers', 'Travel vouchers', 'Hotel vouchers'],
+        typeSpeed: 100,
+        backSpeed: 100,
+        startDelay: 1000,
+        attr: 'placeholder',
+        bindInputFocusEvents: true,
+        loop: true
+    });
+</script>
 </body>
 </html>

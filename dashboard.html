@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-main hidden-sm">
+        <label for="sidebarToggler" class="menu-toggle hidden-md"><img src="assets/images/toggle-icon.svg" alt="toggle-icon"></label>            
+        <div class="sidemenu">
+            <div class="content">
+                <img src="assets/images/profile.png" alt="">
+                <ul>
+                    <li>
+                        <?xml version="1.0" standalone="no"?>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="70 364 18 18"
+                            width="18" height="18" class="dashboard-ico">
+                            <g id="ic_dashboard_24px">
+                                <path d=" M 70 374 L 78 374 L 78 364 L 70 364 L 70 374 Z  M 70 382 L 78 382 L 78 376 L 70 376 L 70 382 Z  M 80 382 L 88 382 L 88 372 L 80 372 L 80 382 Z  M 80 364 L 80 370 L 88 370 L 88 364 L 80 364 Z "
+                                />
+                            </g>
+                        </svg>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <?xml version="1.0" standalone="no"?>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="70 428 22 22"
+                            width="22" height="22" class="account-ico">
+                            <g id="settings-gear-63">
+                                <path d=" M 92 441 L 92 437 L 88.738 437 C 88.549 436.268 88.261 435.578 87.886 434.942 L 90.192 432.636 L 87.364 429.808 L 85.058 432.114 C 84.422 431.739 83.732 431.451 83 431.262 L 83 428 L 79 428 L 79 431.262 C 78.268 431.451 77.578 431.739 76.942 432.114 L 74.636 429.808 L 71.808 432.636 L 74.114 434.942 C 73.739 435.578 73.451 436.268 73.262 437 L 70 437 L 70 441 L 73.262 441 C 73.451 441.732 73.739 442.422 74.114 443.058 L 71.808 445.364 L 74.636 448.192 L 76.942 445.886 C 77.577 446.261 78.268 446.549 79 446.738 L 79 450 L 83 450 L 83 446.738 C 83.732 446.549 84.422 446.261 85.058 445.886 L 87.364 448.192 L 90.192 445.364 L 87.886 443.058 C 88.261 442.423 88.549 441.732 88.738 441 L 92 441 Z  M 81 442 C 79.343 442 78 440.657 78 439 C 78 437.343 79.343 436 81 436 C 82.657 436 84 437.343 84 439 C 84 440.657 82.657 442 81 442 Z "
+                                />
+                            </g>
+                        </svg>
+                        <a href="#">Account settings</a>
+                    </li>
+
+                    <div class="quicklinks">
+                        <h1>Quicklinks</h1>
+                        <li><a href="#" class="red-text">Help center</a></li>
+                        <li><a href="#" class="red-text">FAQs</a></li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+
+            <div class="overview">
+                <div class="vouchers-sold">
+                    <h1>Vouchers sold</h1>
+                    <div class="card">
+                        <span>4535</span>
+                        <span>vouchers sold</span>
+                    </div>
+                </div>
+                <div class="active-terminals">
+                    <h1>Active terminals</h1>
+                    <div class="card">
+                        <span>0</span>
+                        <span>Terminals active</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transaction-history">
+                <h1>Transaction history</h1>
+                <div class="date-filter">
+                    <span>July 2nd, 2017</span>
+                    <select name="date-filter" id="">
+                        <option value="daily">Daily</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                </div>
+                <div class="p">export</div>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th>Transaction ID</th>
+                            <th>Price</th>
+                            <th>Terminal</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>532842398</td>
+                            <td>N10,000</td>
+                            <td>1</td>
+                            <td>23-11-2017</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>532842398</td>
+                            <td>N10,000</td>
+                            <td>1</td>
+                            <td>23-11-2017</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>532842398</td>
+                            <td>N10,000</td>
+                            <td>5</td>
+                            <td>23-11-2017</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="terminal">
+                <h1>Terminal</h1>
+                
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th>Transaction ID</th>
+                            <th>Price</th>
+                            <th>Terminal</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>532842398</td>
+                            <td>N10,000</td>
+                            <td>1</td>
+                            <td>23-11-2017</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>532842398</td>
+                            <td>N10,000</td>
+                            <td>1</td>
+                            <td>23-11-2017</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>532842398</td>
+                            <td>N10,000</td>
+                            <td>5</td>
+                            <td>23-11-2017</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="menuContainer hidden-md">
+        <input type="checkbox" id="menuToggle" class="hidden-md">
+        <label for="menuToggle" class="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="menu">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Account settings</a></li>
+            <li><a href="#">Log out</a></li>
+        </ul>
+    </div>
+
+    <div class="container-main hidden-md">
+        <div class="vouchers-sold">
+            <h1>Vouchers sold</h1>
+            <div class="overview-card">
+                <span>4535</span>
+                <span>vouchers sold</span>
+            </div>
+        </div>
+        <div class="active-terminals">
+            <h1>Active terminals</h1>
+            <div class="overview-card">
+                <span>0</span>
+                <span>Terminals active</span>
+            </div>
+        </div>
+
+        <div class="tbl-details">
+            <h1>Transaction history</h1>
+            <table class="table table-bordered table-striped table-responsive table-full-width">
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Transaction ID</th>
+                        <th>Price</th>
+                        <th>Terminal</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>532842398</td>
+                        <td>N10,000</td>
+                        <td>1</td>
+                        <td>23-11-2017</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>532842398</td>
+                        <td>N10,000</td>
+                        <td>1</td>
+                        <td>23-11-2017</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>532842398</td>
+                        <td>N10,000</td>
+                        <td>5</td>
+                        <td>23-11-2017</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tbl-details">
+            <h1>Terminals</h1>
+            <table class="table table-bordered table-striped table-responsive table-full-width">
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Issued to</th>
+                        <th>Status</th>
+                        <th>No of transactions</th>
+                        <th>Date of Issue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Ayeni. G</td>
+                        <td class="active">Active</td>
+                        <td>54</td>
+                        <td>23-11-2017</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Solomon X.</td>
+                        <td class="inactive">Inactive</td>
+                        <td>35</td>
+                        <td>23-11-2017</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Reuben G.</td>
+                        <td class="active">Active</td>
+                        <td>4</td>
+                        <td>23-11-2017</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

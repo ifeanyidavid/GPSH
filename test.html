@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style>
+    .dotted-border {
+        border: dotted;
+        position: relative;
+        width: 536px;
+        height: 350px;
+    }
+
+    #top-left,
+    #middle,
+    #bottom-right {
+        position: absolute;
+        top: 0px;
+    }
+
+    #top-left {
+        left: 360px;
+        clip: rect(0px, 175px, 113px, 0px);
+    }
+
+
+    #middle {
+        left: 280px;
+        clip: rect(119px, 255px, 229px, 80px);
+        /* standard syntax, unsupported by Internet Explorer 4-7 */
+    }
+
+    #bottom-right {
+        left: 200px;
+        clip: rect(235px 335px 345px 160px);
+        /* non-standard syntax, but supported by all major browsers*/
+    }
+</style>
+</head>
+<body>
+<p class="dotted-border">
+    <img src="assets/images/1.jpg" title="Original Graphic" />
+    <img id="top-left" src="assets/images/2.jpg" title="Graphic clipped to upper left">
+    <img id="middle" src="assets/images/3.jpg" title="Graphic clipped towards middle">
+    <img id="bottom-right" src="assets/images/4.jpg" title="Graphic clipped to bottom right">
+</p>
+</body>
+</html>
