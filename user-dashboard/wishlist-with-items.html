@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User dashboard</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/css/user-dashboard.css">
+    <link rel="stylesheet" href="assets/css/flickity.min.css" media="screen">
+
+</head>
+
+<body class="body-m">
+
+    <!-- SHARE WISHLIST MODAL BOX -->
+    <input type="checkbox" name="shareWishlistModal" id="sharewishlistModal" class="shareModalState">
+    <div class="sharewishlistModal">
+        <label for="sharewishlistModal" class="modal-bg"></label>
+        <div class="modal-inner">
+            <div class="close"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="title">Share this wishlist</h1>
+                    </div>
+                </div>
+                <form action="">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="" class="input-label">Your wishlist URL</label>
+                            <div class="input-group">
+                                <input type="text" name="wishlistName" class="input-field" value="http://gp.sh/3shr83" readonly>
+                                <span class="input-group-addon" id="basic-addon2">Copy</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <p>or</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center social-share">
+                        <a href="#" class="social-icon facebook"></a>
+                        <a src="assets/images/twitter-with-circle.svg" href="#" class="social-icon twitter"></a>
+                        <a src="assets/images/mail-with-circle.svg" href="#" class="social-icon mail"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WISHLIST MODAL BOX -->
+    <input type="checkbox" name="wishlistModal" id="wishlistModal" class="modalState">
+    <div class="wishlistModal">
+        <label for="wishlistModal" class="modal-bg"></label>
+        <div class="modal-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="title">Create a wishlist</h1>
+                    </div>
+                </div>
+                <form action="">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="" class="input-label">Name your wishlist</label>
+                                <input type="text" name="wishlistName" class="input-field">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="selectWishlist" class="input-label">Purpose of wishlist</label>
+                                <input type="text" name="wishlistPurpose" class="input-field">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-end">
+                            <label class="btn btn-primary" for="wishlistModal">Cancel</label><label class="btn btn-primary"
+                                for="wishlistModal">Save</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER -->
+    <div class="header">
+        <div class="nav--">
+            <div class="left-nav">
+                <div class="logo">Giftplush</div>
+            </div>
+            <div class="right-nav">
+                <span>Help</span>
+                <span class="account-name">Frank Douglas</span>
+                <div class="user-profile">
+                    <img src="assets/images/user-profile.svg" alt="user-profile-image">
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 intro-title">
+                    <h1>Welcome back!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABS NAVIGATION -->
+    <div class="tabs-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 d-flex justify-content-center tabs">
+                    <a href="myaccount.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-18818 -3890 24 24" class="icon--fill">
+                            <g id="dashboard-level" transform="translate(-18819 -3891)">
+                                <path id="Path_215" data-name="Path 215" class="cls-1" d="M23.522,8.609a.522.522,0,0,0,.522-.522V6.522a.522.522,0,1,0-1.043,0V8.087A.522.522,0,0,0,23.522,8.609Z"
+                                    transform="translate(-10.522 -2.391)" />
+                                <path id="Path_216" data-name="Path 216" class="cls-1" d="M33.052,12.977a.522.522,0,0,0,.738,0L34.9,11.871a.522.522,0,0,0-.738-.738L33.052,12.24A.522.522,0,0,0,33.052,12.977Z"
+                                    transform="translate(-15.256 -4.773)" />
+                                <path id="Path_217" data-name="Path 217" class="cls-1" d="M37,23.522a.522.522,0,0,0,.522.522h1.565a.522.522,0,1,0,0-1.043H37.522A.522.522,0,0,0,37,23.522Z"
+                                    transform="translate(-17.217 -10.522)" />
+                                <path id="Path_218" data-name="Path 218" class="cls-1" d="M12.977,12.977a.522.522,0,0,1-.738,0l-1.107-1.107a.522.522,0,0,1,.738-.738l1.107,1.107A.522.522,0,0,1,12.977,12.977Z"
+                                    transform="translate(-4.773 -4.773)" />
+                                <path id="Path_219" data-name="Path 219" class="cls-1" d="M8.609,23.522a.522.522,0,0,1-.522.522H6.522a.522.522,0,1,1,0-1.043H8.087A.522.522,0,0,1,8.609,23.522Z"
+                                    transform="translate(-2.391 -10.522)" />
+                                <path id="Path_220" data-name="Path 220" class="cls-1" d="M19.259,14.074a51.228,51.228,0,0,0,1.061,5.853,1.565,1.565,0,1,0,2.825-1.349A51.33,51.33,0,0,0,19.259,14.074Z"
+                                    transform="translate(-8.733 -6.253)" />
+                                <path id="Path_221" data-name="Path 221" class="cls-1" d="M13,1A12,12,0,1,0,25,13,12.014,12.014,0,0,0,13,1ZM2.871,17.174a10.957,10.957,0,1,1,20.257,0Z"
+                                />
+                            </g>
+                        </svg>
+                        Account
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center tabs">
+                    <a href="wishlist.html" class="active">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-18440 -3887.501 23.998 21.899" class="icon--fill">
+                            <path id="Path_243" data-name="Path 243" class="cls-1" d="M21.243,3.757A6,6,0,0,0,12,4.684a6,6,0,1,0-9.242,7.558L12,21.485l9.243-9.243A6,6,0,0,0,21.243,3.757Z"
+                                transform="translate(-18440.002 -3888.5)" />
+                        </svg>
+                        Wishlist
+                    </a>
+                </div>
+                <div class="col-4 d-flex justify-content-center tabs">
+                    <a href="settings.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-18103 -3889 24 24" class="icon--fill">
+                            <g id="settings-gear-63" transform="translate(-18104 -3890)">
+                                <path id="Path_230" data-name="Path 230" class="cls-1" d="M25,15.182V10.818H21.441a8.692,8.692,0,0,0-.929-2.245l2.516-2.516L19.943,2.972,17.427,5.488a8.692,8.692,0,0,0-2.245-.929V1H10.818V4.559a8.692,8.692,0,0,0-2.245.929L6.057,2.972,2.972,6.057,5.488,8.573a8.692,8.692,0,0,0-.929,2.245H1v4.364H4.559a8.692,8.692,0,0,0,.929,2.245L2.972,19.943l3.085,3.085,2.516-2.516a8.676,8.676,0,0,0,2.245.929V25h4.364V21.441a8.692,8.692,0,0,0,2.245-.929l2.516,2.516,3.085-3.085-2.516-2.516a8.676,8.676,0,0,0,.929-2.245H25ZM13,16.273A3.273,3.273,0,1,1,16.273,13,3.273,3.273,0,0,1,13,16.273Z"
+                                />
+                            </g>
+                        </svg>
+                        Settings
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN BODY -->
+    <div class="main-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between wishlist-header align-items-center align-items-md-center">
+                    <h1 class="section-title mb-0">Wishlist</h1>
+                    <label class="btn btn-primary modalTrigger d-flex align-items-center justify-content-center" for="wishlistModal">Create a wishlist</label>
+                </div>
+            </div>
+            <div class="wishlist">
+                <div class="row wishlist-header">
+                    <div class="col-12 d-flex align-items-center justify-content-between">
+                        <div class="right-heading d-flex align-items-md-center flex-column flex-md-row">
+                            <h1 class="mr-0 mr-md-5 mb-2 mb-md-0">21st birthday wishlist</h1>
+                            <label class="share" for="sharewishlistModal">Share</label>
+                        </div>
+                        <div class="left-heading mb-4 mb-md-0">
+                            <a href="#">See all</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3 main-carousel" data-flickity='{ "cellAlign": "center", "contain": true, "groupCells": true, "wrapAround": true, "imagesLoaded": true, "pageDots": false, "adaptive": true, "selectedAttraction": 0.5, "friction": 1 }'>
+                    <div class="col-6 col-md-3 wishlist-item carousel-cell" style="height: 100%; width: 50%">
+                        <a href="#" class="item">
+                            <div>
+                                <div class="item-img"></div>
+                                <div class="item-name">
+                                    <h3>Harvester voucher</h3>
+                                </div>
+                                <div class="item-desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 wishlist-item carousel-cell">
+                        <a href="#" class="item">
+                            <div>
+                                <div class="item-img"></div>
+                                <div class="item-name">
+                                    <h3>Flaming grills voucher</h3>
+                                </div>
+                                <div class="item-desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 wishlist-item carousel-cell">
+                        <a href="#" class="item">
+                            <div>
+                                <div class="item-img"></div>
+                                <div class="item-name">
+                                    <h3>Chimichanga voucher</h3>
+                                </div>
+                                <div class="item-desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 wishlist-item carousel-cell">
+                        <a href="#" class="item">
+                            <div>
+                                <div class="item-img"></div>
+                                <div class="item-name">
+                                    <h3>Frankie & Bennie's voucher</h3>
+                                </div>
+                                <div class="item-desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wishlist">
+                <div class="row wishlist-header">
+                    <div class="col-12 d-flex align-items-center justify-content-between">
+                        <div class="right-heading d-flex align-items-md-center flex-column flex-md-row">
+                            <h1 class="mr-0 mr-md-5 mb-2 mb-md-0">Christmas wishlist</h1>
+                            <label class="share" for="sharewishlistModal">Share</label>
+                        </div>
+                        <div class="left-heading mb-4 mb-md-0">
+                            <a href="#">See all</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 col-md-3 wishlist-item">
+                        <a href="#" class="item">
+                            <div>
+                                <div class="item-img"></div>
+                                <div class="item-name">
+                                    <h3>Harvester voucher</h3>
+                                </div>
+                                <div class="item-desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 wishlist-item carousel-cell">
+                        <a href="#" class="item">
+                            <div>
+                                <div class="item-img"></div>
+                                <div class="item-name">
+                                    <h3>Flaming grills voucher</h3>
+                                </div>
+                                <div class="item-desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 wishlist-item carousel-cell">
+                        <a href="#" class="item">
+                            <div>
+                                <div class="item-img"></div>
+                                <div class="item-name">
+                                    <h3>Chimichanga voucher</h3>
+                                </div>
+                                <div class="item-desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 wishlist-item carousel-cell">
+                        <a href="#" class="item">
+                            <div>
+                                <div class="item-img"></div>
+                                <div class="item-name">
+                                    <h3>Frankie & Bennie's voucher</h3>
+                                </div>
+                                <div class="item-desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wishlist">
+                <div class="row wishlist-header">
+                    <div class="col-12 d-flex align-items-center justify-content-between">
+                        <div class="right-heading d-flex align-items-md-center flex-column flex-md-row">
+                            <h1 class="mr-0 mr-md-5 mb-2 mb-md-0">21st birthday wishlist</h1>
+                            <label class="share" for="sharewishlistModal">Share</label>
+                        </div>
+                        <!-- <div class="left-heading mb-4 mb-md-0">
+                            <a href="#">See all</a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 wishlist-item">
+                        <div class="no-item">
+                            <h3>You haven't added any voucher to this wishlist</h3>
+                            <p>To add items, click the <img src="assets/images/heart.svg"> icon while browsing</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/tether.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/flickity.pkgd.min.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>
