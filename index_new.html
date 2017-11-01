@@ -20,21 +20,22 @@
     <div class="modalX">
         <label for="authModal" class="modal-bg"></label>
         <div class="modal-inner authModal-inner">
-            <label for="loginModal"><i class="la la-close"></i></label>
             <div class="container">
+                <input type="radio" name="options" id="signup-form-radio" class="options">
+                <input type="radio" name="options" id="signupRadio" class="options"/>                    
+                <input type="radio" name="options" id="loginRadio" class="options" checked/>                   
                 <div class="row tab-header">
                     <div class="col-12 d-flex">
-                        <div class="login-radio mr-3">
-                            <input type="radio" name="options" id="loginRadio" class="options" />
-                            <label for="login">Login</label>
+                        <div class="authToggle mr-3">
+                            <label for="loginRadio" class="loginToggle">Login</label>
                         </div>
-                        <div class="signup-radio">
-                            <input type="radio" name="options" id="signupRadio" class="options" checked/>
-                            <label for="signup">Sign Up</label>
+                        <div class="authToggle">
+                            <label for="signupRadio" class="signupToggle">Sign Up</label>
                         </div>
                     </div>
                 </div>
                 <div class="tab-body-login">
+                    <label for="authModal" class="closemodal"><i class="la la-close"></i></label>
                     <div class="row mb-3 d-flex align-items-center mt-5">
                         <div class="col-12 col-md-6 mb-3 mb-md-0">
                             <button class="btn btn-fb-auth w-100 d-flex justify-content-center align-items-center">Sign in with Facebook</button>
@@ -60,13 +61,23 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-12 d-flex justify-content-between">
-                                <div class="remember-me d-flex align-items-center">
-                                    <input type="checkbox" name="remember" id="remember" class="remember-me mr-2">
-                                    <label for="remember" class="m-0">Remember me</label>
+                            <div class="col-6 d-flex justify-content-between options">
+                                <div class="remember-me d-flex align-items-center cntr">
+                                    <label class="label-cbx m-0" for="remember">
+                                        <input type="checkbox" name="" id="remember" class="mr-3 notvisible">
+                                        <div class="checkbox">
+                                            <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                            <path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
+                                            <polyline points="4 11 8 15 16 6"></polyline>
+                                            </svg>
+                                        </div>
+                                        <span>Remember me</span>
+                                    </label>
                                 </div>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end">
                                 <div class="forgot-password">
-                                    <a href="#">Forgot password?</a>
+                                    <a href="#" class="no-wrap">Forgot password?</a>
                                 </div>
                             </div>
                         </div>
@@ -77,13 +88,14 @@
                         </div>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center modal-footer">
-                                <span>Don't have an account? <label for="signup" class="new-signup">Sign Up</a></span>
+                                <span>Don't have an account? <label for="signupRadio" class="new-signup">Sign Up</label></span>
                             </div>
                         </div>
                     </form>
                 </div>
 
                 <div class="tab-body-signup">
+                    <label for="authModal" class="closemodal"><i class="la la-close"></i></label>                        
                     <div class="row mb-3 mt-3">
                         <div class="col-12">
                             <button class="btn btn-fb-auth w-100 d-flex justify-content-center align-items-center">Continue with Facebook</button>
@@ -101,13 +113,13 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <label for="signup-form" class="btn btn-signup w-100 d-flex justify-content-center align-items-center">Continue with Email</label>
+                            <label for="signup-form-radio" class="btn btn-signup w-100 d-flex justify-content-center align-items-center">Continue with Email</label>
                         </div>
                     </div>
                 </div>
 
-                <input type="radio" name="options" id="signup-form-radio" class="options">
                 <div class="tab-body-signup-form mt-5">
+                    <label for="authModal" class="closemodal"><i class="la la-close"></i></label>                        
                     <form action="#">
                         <div class="row mb-3">
                             <div class="col-12">
@@ -196,15 +208,16 @@
         </div>
     </div>
 
-    < <!-- MOBILE MENU -->
+
+    <!-- MOBILE MENU -->
     <input type="checkbox" id="navmenutoggle">
     <div class="overlaymenu overlaymenu-slidedown">
         <div class="container-fluid p-3 p-md-4">
             <div class="row mb-5">
                 <div class="col-12 d-flex align-items-center overlaymenuheader">
                     <label for="navmenutoggle" class="toggle mb-0 mr-3 d-xl-none">
-                                    <i class="la la-close"></i>                                    
-                                </label>
+                        <i class="la la-close"></i>                                    
+                    </label>
                     <a href="index_new.html" class="logo">Giftplush</a>
                 </div>
             </div>
@@ -215,12 +228,12 @@
             </div>
             <div class="row link">
                 <div class="col-12">
-                    <label for="loginModal">Sign in</label>
+                    <label for="authModal">Sign in</label>
                 </div>
             </div>
             <div class="row link">
                 <div class="col-12">
-                    <label for="loginModal">Sign Up</label>
+                    <label for="authModal">Sign Up</label>
                 </div>
             </div>
             <hr>
@@ -254,7 +267,7 @@
     <!-- HEADER -->
     <header class="header">
         <nav class="container-fluid navigation p-3 p-md-4">
-            <div class="row align-items-center">
+            <div class="row align-items-center nav-home">
                 <div class="col-12 col-md-4 col-xl-2 nav-left">
                     <div class="branding d-flex align-items-center">
                         <label for="navmenutoggle" class="toggle mb-0 mr-3 d-xl-none">
@@ -262,11 +275,6 @@
                         </label>
                         <a href="index_new.html" class="logo">Giftplush</a>
                     </div>
-                </div>
-
-                <div class="col-4 w-100 search-container d-none d-xl-block">
-                    <input type="text" name="searchbar" id="searchbar" placeholder="Search Giftplush" class="searchbar">    
-                    <i class="la la-search"></i>              
                 </div>
 
                 <div class="col-5 push-1 nav-right d-xl-flex d-none align-items-center justify-content-between">
@@ -341,31 +349,51 @@
                     <a href="#">Help</a>
                     <label for="authModal" class="access d-flex align-items-center justify-content-center m-0">Sign in/Sign up</label>
                 </div>
-
-                <div class="col-12 col-md-8 search-container-mobile d-xl-none mt-3 mt-md-0">
-                    <input type="text" name="searchbar" id="searchbar" class="searchbar-mobile" placeholder="Search Giftplush">
-                    <i class="la la-search"></i>               
-                </div>
             </div>
         </nav>
-    </header>
 
-    <!-- VOUCHER BODY -->
-    <main class="container voucher-body voucher-body-alt-page">
-
-        <div class="voucher-section mb-5 mt-5">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <div class="section-heading d-flex justify-content-between align-items-center">
-                        <h1>Vouchers in Lagos</h1>
+        <section class="container hero d-flex justify-content-center flex-column align-items-center align-content-center">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 col-md-8">
+                    <div class="hero-text text-left text-md-center">
+                        <h1>Digital vouchers for just about anything.</h1>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="hero-search mt-5 d-flex justify-content-left justify-content-md-center ml-0 ml-md-0">
+                        <div class="input-group">
+                            <input type="text" placeholder="Start searching" class="form-control">
+                            <button class="search-btn d-flex justify-content-center align-items-center">
+                                    <i class="la la-search d-block d-xl-none"></i>                                    
+                                <span class="d-none d-xl-block">Search</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <hr>
+
+    <!-- VOUCHER BODY -->
+    <div class="container voucher-body">
+        <div class="voucher-section mb-5">
             <div class="row mb-4">
+                <div class="col-12">
+                    <div class="section-heading d-flex justify-content-between align-items-center">
+                        <h1>Experiences</h1>
+                        <a href="collections.html" class="see-all text-nowrap">See all</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-6 col-md-3 voucher-container">
                     <a href="#" class="voucher">
                         <div>
-                            <div class="voucher-image-collections">
+                            <div class="voucher-image">
                                 <label for="addToWishlist" class="addToWishlist">
                                     <i class="la la-heart"></i>
                                 </label>
@@ -382,7 +410,7 @@
                 <div class="col-6 col-md-3 voucher-container">
                     <a href="#" class="voucher">
                         <div>
-                            <div class="voucher-image-collections">
+                            <div class="voucher-image">
                                 <label for="addToWishlist" class="addToWishlist">
                                     <i class="la la-heart"></i>
                                 </label>
@@ -399,7 +427,7 @@
                 <div class="col-6 col-md-3 voucher-container">
                     <a href="#" class="voucher">
                         <div>
-                            <div class="voucher-image-collections">
+                            <div class="voucher-image">
                                 <label for="addToWishlist" class="addToWishlist">
                                     <i class="la la-heart"></i>
                                 </label>
@@ -416,7 +444,7 @@
                 <div class="col-6 col-md-3 voucher-container">
                     <a href="#" class="voucher">
                         <div>
-                            <div class="voucher-image-collections">
+                            <div class="voucher-image">
                                 <label for="addToWishlist" class="addToWishlist">
                                     <i class="la la-heart"></i>
                                 </label>
@@ -431,14 +459,25 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <div class="voucher-section mb-5">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="section-heading d-flex justify-content-between align-items-center">
+                        <h1>Popular reservations</h1>
+                        <a href="collections.html" class="see-all text-nowrap">See all</a>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-6 col-md-3 voucher-container">
                     <a href="#" class="voucher">
                         <div>
-                            <div class="voucher-image-collections">
+                            <div class="voucher-image">
                                 <label for="addToWishlist" class="addToWishlist">
-                                                    <i class="la la-heart"></i>
-                                                </label>
+                                    <i class="la la-heart"></i>
+                                </label>
                             </div>
                             <div class="voucher-name">
                                 <h3>Flaming grills voucher</h3>
@@ -452,10 +491,10 @@
                 <div class="col-6 col-md-3 voucher-container">
                     <a href="#" class="voucher">
                         <div>
-                            <div class="voucher-image-collections">
+                            <div class="voucher-image">
                                 <label for="addToWishlist" class="addToWishlist">
-                                                    <i class="la la-heart"></i>
-                                                </label>
+                                    <i class="la la-heart"></i>
+                                </label>
                             </div>
                             <div class="voucher-name">
                                 <h3>Interflora voucher</h3>
@@ -469,10 +508,10 @@
                 <div class="col-6 col-md-3 voucher-container">
                     <a href="#" class="voucher">
                         <div>
-                            <div class="voucher-image-collections">
+                            <div class="voucher-image">
                                 <label for="addToWishlist" class="addToWishlist">
-                                                    <i class="la la-heart"></i>
-                                                </label>
+                                    <i class="la la-heart"></i>
+                                </label>
                             </div>
                             <div class="voucher-name">
                                 <h3>Cineworld voucher</h3>
@@ -483,9 +522,379 @@
                         </div>
                     </a>
                 </div>
+                <div class="col-6 col-md-3 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image">
+                                <label for="addToWishlist" class="addToWishlist">
+                                    <i class="la la-heart"></i>
+                                </label>
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Matalan voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-    </main>
+
+        <div class="voucher-section mb-5">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="section-heading d-flex justify-content-between align-items-center">
+                        <h1>Vouchers in Lagos</h1>
+                        <a href="collections.html" class="see-all text-nowrap">See all</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-3 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image">
+                                <label for="addToWishlist" class="addToWishlist">
+                                    <i class="la la-heart"></i>
+                                </label>
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Flaming grills voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image">
+                                <label for="addToWishlist" class="addToWishlist">
+                                    <i class="la la-heart"></i>
+                                </label>
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Interflora voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image">
+                                <label for="addToWishlist" class="addToWishlist">
+                                    <i class="la la-heart"></i>
+                                </label>
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Cineworld voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image">
+                                <label for="addToWishlist" class="addToWishlist">
+                                    <i class="la la-heart"></i>
+                                </label>
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Matalan voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="voucher-section mb-5">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="section-heading d-flex justify-content-between align-items-center">
+                        <h1>Just bought vouchers</h1>
+                        <a href="collections.html" class="see-all text-nowrap">See all</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-2 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image just-bought">
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Flaming grills voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image just-bought">
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Interflora voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image just-bought">
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Cineworld voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image just-bought">
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Matalan voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image just-bought">
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Matalan voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-2 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image just-bought">
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Matalan voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="voucher-section mb-5">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="section-heading d-flex justify-content-between align-items-center">
+                        <h1>Vouchers in Abuja</h1>
+                        <a href="collections.html" class="see-all text-nowrap">See all</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-3 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image">
+                                <label for="addToWishlist" class="addToWishlist">
+                                    <i class="la la-heart"></i>
+                                </label>
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Flaming grills voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image">
+                                <label for="addToWishlist" class="addToWishlist">
+                                    <i class="la la-heart"></i>
+                                </label>
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Interflora voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image">
+                                <label for="addToWishlist" class="addToWishlist">
+                                    <i class="la la-heart"></i>
+                                </label>
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Cineworld voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image">
+                                <label for="addToWishlist" class="addToWishlist">
+                                    <i class="la la-heart"></i>
+                                </label>
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Matalan voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="voucher-section mb-5 ad">
+            <div class="row">
+                <div class="col-12 w-100 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image pt-25">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="voucher-section mb-5">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="section-heading d-flex justify-content-between align-items-center">
+                        <h1>Popular reservations</h1>
+                        <a href="collections.html" class="see-all text-nowrap">See all</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-3 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image">
+                                <label for="addToWishlist" class="addToWishlist">
+                                    <i class="la la-heart"></i>
+                                </label>
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Flaming grills voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image">
+                                <label for="addToWishlist" class="addToWishlist">
+                                    <i class="la la-heart"></i>
+                                </label>
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Interflora voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image">
+                                <label for="addToWishlist" class="addToWishlist">
+                                    <i class="la la-heart"></i>
+                                </label>
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Cineworld voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 voucher-container">
+                    <a href="#" class="voucher">
+                        <div>
+                            <div class="voucher-image">
+                                <label for="addToWishlist" class="addToWishlist">
+                                    <i class="la la-heart"></i>
+                                </label>
+                            </div>
+                            <div class="voucher-name">
+                                <h3>Matalan voucher</h3>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer pb-5 pt-3 pt-md-5">
