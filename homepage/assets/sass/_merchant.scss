@@ -1,0 +1,129 @@
+.merchant-container {
+    padding: 0px;
+    display: block;
+    @media (min-width: 768px) {
+        padding: 100px;
+    }
+    .headline {
+        font-size: 24px;
+        font-weight: normal;
+    }
+    .subtext {
+        font-size: 14px;
+        color: $secondary-black;
+        font-weight: 300;
+    }
+    .box {
+        background: $primary-white;
+        border: 1px solid $divider;
+        border-radius: 8px;
+        @media (min-width: 768px) {
+            max-width: 50%;
+        }
+        .header-img {
+            i:before {
+                background: $primary-black;
+                padding: 24px;
+                border-radius: 50%;
+                color: $primary-white;
+                font-size: 32px;
+                line-height: normal;
+            }
+        }
+        .box-header {
+            font-size: 22px;
+        }
+        .btn {
+            padding-top: 14px;
+            padding-bottom: 14px;
+            background: $primary-black;
+            color: $primary-white;
+            font-family: $font-family;
+            cursor: pointer;
+        }
+    }
+}
+
+.registration-form-container {
+    padding: 8px;
+
+    @media (min-width: 768px) {
+        padding: 40px; 
+     }
+    .registration-form {
+        border: 1px solid $divider;
+        max-width: 800px;
+        width: auto;
+        box-sizing: border-box;
+        background: #fff;
+        border-radius: 8px;
+        .main-heading {
+            font-size: 28px;
+            font-weight: 800;
+            color: $primary-black;
+            margin: 0;
+
+            @media (min-width: 768px) {
+                font-size: 32px; 
+             }
+        }
+        .sub-desc {
+            font-size: 14px;
+            font-weight: 700;
+            color: $secondary-black;
+        }
+        .form-container {
+            .section {
+                .section-header {
+                    font-size: 19px;
+                    padding-bottom: 16px;
+                    width: 100%;
+                    color: $secondary-black;
+                }
+                .f-label {
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: $primary-black;
+                }
+                .f-input {
+                    height: 50px;
+                    padding-left: 12px;
+                    border-radius: 2px;
+                    font-size: 14px;
+                    line-height: normal;
+                    border: 1px solid $divider;
+                    font-family: $font-family;
+                    &:focus {
+                        border: 1px solid $primary-black;
+                    }
+
+                    &::placeholder{
+                        color: $secondary-black;
+                    }
+                }
+                hr{
+                    background: $divider !important;
+                }
+                .agreement {
+                    font-size: 15px;
+                    font-weight: normal;
+                    color: $primary-black;
+                    .agreement-link {
+                        color: inherit;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .btn-create-account {
+                font-size: 15px;
+                font-weight: 500;
+                color: $primary-white;
+                background: $primary-black;
+                border-radius: 4px;
+                height: 50px;
+                font-family: $font-family;
+                cursor: pointer;
+            }
+        }
+    }
+}

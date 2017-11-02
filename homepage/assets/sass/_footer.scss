@@ -1,0 +1,161 @@
+// FOOTER
+.footer {
+    // WEB
+    background: #fcfcfc; // border-top: 1px solid $divider;
+    .social-links {
+        .social-link {
+            padding: 10px;
+        }
+        .facebook {
+            background: url(../images/facebook.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .instagram {
+            background: url(../images/instagram.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .medium {
+            background: url(../images/medium.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .twitter {
+            background: url(../images/twitter.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+    .subscribe {
+        span {
+            color: $primary-black;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .input-group {
+            input[type="text"] {
+                height: 45px;
+                background: $primary-white;
+                border: 1px solid $divider;
+                border-radius: 2px 0 0 2px;
+                font-family: $font-family;
+                font-size: 15px;
+                font-weight: 700;
+                color: $primary-black;
+                &::placeholder {
+                    font-weight: normal;
+                    color: $secondary-black;
+                }
+                &:focus {
+                    border: 1px solid $primary-black;
+                }
+            }
+            .btn-subscribe {
+                background: $primary-black;
+                color: $primary-white;
+                font-family: $font-family;
+                border-radius: 0 4px 4px 0;
+            }
+        }
+    }
+    hr {
+        background: $divider;
+    }
+    .footer-links {
+        h3 {
+            color: $primary-black;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        span {
+            font-size: 15px;
+            color: $secondary-black;
+            font-weight: normal;
+        }
+        a {
+            text-decoration: none;
+            color: $secondary-black;
+            font-size: 15px;
+            display: block;
+            margin-bottom: 4px;
+            font-weight: normal;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        select {
+            border-radius: 4px;
+            height: 45px !important;
+            border: 1px solid $divider;
+        }
+    } // MOBILE
+    .picker {
+        select {
+            height: 45px !important;
+            font-family: $font-family;
+            font-size: 14px;
+            border-radius: 4px;
+            border: 1px solid $divider;
+            background: $primary-white;
+            color: $primary-black;
+            font-weight: normal;
+        }
+    }
+    .partner {
+        .btn-partner {
+            width: 100%;
+            height: 45px;
+            font-family: $font-family;
+            color: $primary-black;
+            font-size: 14px;
+            border-radius: 4px;
+            border: 1px solid $divider;
+            background: $primary-white;
+            outline: none;
+        }
+    }
+    .links {
+        a {
+            color: $secondary-black;
+            font-size: 14px;
+            font-weight: normal;
+            text-decoration: none;
+        }
+    }
+    .social-channels {
+        .social-channel {
+            padding: 10px;
+        }
+        .facebook {
+            background: url(../images/facebook.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .instagram {
+            background: url(../images/instagram.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .medium {
+            background: url(../images/medium.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .twitter {
+            background: url(../images/twitter.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+    .copyright {
+        i.la {
+            color: $secondary-black;
+            font-size: 24px;
+        }
+        span {
+            color: $secondary-black;
+            font-size: 14px;
+        }
+    }
+}

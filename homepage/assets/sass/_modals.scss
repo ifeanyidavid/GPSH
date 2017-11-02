@@ -1,0 +1,456 @@
+
+// MODAL
+.modalState {
+    display: none;
+    &:checked+.modalX {
+        opacity: 1;
+        visibility: visible;
+    }
+    &:checked+.modalX .modal-inner {
+        top: 0;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+        @media (max-width: 743px) {
+            padding-top: 48px;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+        }
+        @media (min-width: 992px) {
+            top: 10%;
+        }
+    }
+    &:checked+.modalX .modal-bg {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.modalX {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.75);
+    transition: opacity .25s ease;
+    z-index: 1000;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(0%) translateY(0%);
+    .modal-bg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .authModal-inner,
+    .merchant-auth-login {
+        .closemodal {
+            position: absolute !important;
+            top: -8px !important;
+            right: 0px !important;
+            cursor: pointer;
+            pointer-events: all;
+        }
+        .tab-body-login {
+            display: none;
+        }
+        .tab-body-signup {
+            display: none;
+        }
+        .tab-body-signup-form {
+            display: none;
+        }
+        .options {
+            display: none;
+        }
+        .authToggle label {
+            font-size: 24px;
+            font-weight: 700;
+            color: $secondary-black;
+            text-decoration: none;
+            padding: 0 0 3px 0;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+        }
+        #loginRadio:checked~.tab-header .authToggle .loginToggle,
+        #signupRadio:checked~.tab-header .authToggle .signupToggle,
+        #signup-form-radio:checked~.tab-header .authToggle .signupToggle {
+            color: $primary-black;
+            border-bottom: 3px solid $primary-black;
+        }
+        #loginRadio:checked~#loginCheckbox,
+        #signupRadio:checked~#signupCheckbox,
+        #signup-form-radio:checked~#sign-up-form-checkbox {
+            color: $primary-black;
+            border-bottom: 3px solid $primary-black;
+        }
+        #loginRadio:checked~.tab-body-login {
+            display: block;
+        }
+        #signupRadio:checked~.tab-body-signup {
+            display: block;
+        }
+        #signup-form-radio:checked~.tab-body-signup-form {
+            display: block;
+        }
+        .btn {
+            padding: 14px 8px;
+            font-family: $font-family;
+            font-size: 16px;
+            font-weight: 500;
+            color: $primary-white;
+            cursor: pointer;
+        }
+        .btn-fb-auth {
+            background: #4568b2 !important;
+        }
+        .btn-goog-auth {
+            border: 2px solid #db3236;
+            background: transparent;
+            color: #db3236;
+        }
+        .btn-signup {
+            background: $primary-black !important;
+        }
+        .input-field-container{
+            position: relative;
+            .input-field {
+                padding: 11px !important;
+                font-size: 19px !important;
+                line-height: 24px !important;
+                font-weight: 100 !important;
+                border-radius: 2px !important;
+            }
+            .show-password-trigger{
+                position: absolute;
+                top: 17px;
+                font-size: 10px;
+                font-weight: 500;
+                right: 26px;
+                margin: 0;
+                text-transform: uppercase;
+                font-size: 12px;
+                cursor: pointer;
+            }
+        }
+        .remember-me label {
+            color: $secondary-black !important;
+            font-size: 13px;
+            text-decoration: none;
+            @media (min-width: 992px) {
+                font-size: 15px;
+            }
+        }
+        .options {
+            .label-cbx {
+                user-select: none;
+                cursor: pointer;
+                margin-bottom: 0;
+                input:checked {
+                    &+.checkbox {
+                        border-color: $primary-black;
+                        svg {
+                            path {
+                                fill: $primary-black;
+                            }
+                            polyline {
+                                stroke-dashoffset: 0;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .checkbox {
+                        svg {
+                            path {
+                                stroke-dashoffset: 0;
+                            }
+                        }
+                    }
+                }
+                .checkbox {
+                    position: relative;
+                    top: 2px;
+                    float: left;
+                    margin-right: 8px;
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid $divider;
+                    border-radius: 3px;
+                    svg {
+                        position: absolute;
+                        top: -2px;
+                        left: -2px;
+                        path {
+                            fill: none;
+                            stroke: $primary-black;
+                            stroke-width: 2;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-dasharray: 71px;
+                            stroke-dashoffset: 71px;
+                            transition: all .6s ease;
+                        }
+                        polyline {
+                            fill: none;
+                            stroke: #FFF;
+                            stroke-width: 2;
+                            stroke-linecap: round;
+                            stroke-linejoin: round;
+                            stroke-dasharray: 18px;
+                            stroke-dashoffset: 18px;
+                            transition: all .3s ease;
+                        }
+                    }
+                }
+                >span {
+                    pointer-events: none;
+                    vertical-align: middle;
+                    color: $secondary-black;
+                    font-weight: normal;
+                    color: $secondary-black !important;
+                    font-size: 13px;
+                    text-decoration: none;
+                    @media (min-width: 992px) {
+                        font-size: 15px;
+                    }
+                }
+            }
+            .cntr {
+                position: relative;
+                top: 0%;
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            .notvisible {
+                position: absolute;
+                z-index: -1;
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+        }
+        .forgot-password a {
+            color: $primary-black !important;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            @media (min-width: 992px) {
+                font-size: 15px;
+            }
+        }
+        input[name="showpassword"] {
+            display: none;
+        }
+        .show-password-trigger {
+            color: $primary-black !important;
+            font-size: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            margin: 0;
+            position: absolute;
+            top: 17px;
+            right: 28px;
+            text-transform: uppercase;
+            @media (min-width: 992px) {
+                font-size: 10px;
+            }
+        }
+        meter {
+            // Reset the appearance
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin: 0;
+            width: 100%;
+            height: 0.6em; // Applicable only to firefox
+            background: none;
+            background-color: none;
+            &::-webkit-meter-bar {
+                background: $primary-black;
+            }
+        }
+        .feedback {
+            color: $secondary-black;
+            font-size: 12px;
+            padding: 0 .25em;
+            font-family: $font-family;
+            font-weight: normal;
+            margin-top: 1em;
+        }
+        .password-strength-text{
+            margin: 0;
+        }
+        .btn-login {
+            background: $primary-black !important;
+            border: none !important;
+            color: $primary-white !important;
+            box-shadow: 0 2px 2px $divider;
+        }
+        .modal-footer {
+            span {
+                font-weight: normal;
+                color: $secondary-black;
+                font-size: 19px;
+            }
+        }
+        .new-signup {
+            font-weight: 700;
+            color: $primary-black;
+            cursor: pointer;
+        }
+    }
+    .merchant-auth-login {
+        padding-top: 48px !important;
+        .header-text {
+            font-size: 22px;
+            font-weight: normal;
+            color: $primary-black;
+        }
+    }
+    .modal-inner {
+        // transition: top .25s ease;
+        position: absolute;
+        top: -20%;
+        right: 0; // bottom: 0;
+        left: 0;
+        margin: auto;
+        overflow: auto;
+        background: $primary-white;
+        width: 95%;
+        padding: 0px;
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        transform: scale(0.7);
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+
+        @media (min-width: 992px) {
+            width: 100%;
+            max-width: 568px !important;
+            top: -20%;
+            padding: 24px;
+        }
+        .closemodal {
+            position: absolute;
+            right: 16px !important;
+            top: -30px !important;
+            cursor: pointer;
+            pointer-events: all;
+            i.la:before {
+                color: $secondary-black;
+                font-size: 24px;
+                font-weight: normal;
+            }
+            @media (min-width: 768px) {
+                top: 16px !important;
+                right: 16px !important;
+            }
+        }
+        .title {
+            font-size: 28px;
+            color: $primary-black; // margin-top: 28px;
+            margin-bottom: 0;
+            font-weight: 800;
+        }
+        form {
+            // margin-top: 32px;
+            .input-label {
+                font-size: 15px;
+                font-weight: normal;
+                color: $secondary-black;
+            }
+            .wishlist-picker {
+                height: 45px !important;
+                border-radius: 2px;
+                border: 1px solid $divider;
+                outline: none;
+                font-weight: normal;
+                font-family: 'cerebri sans', sans-serif;
+                color: $primary-black; // background: rgba(2, 117, 216, 0.01);
+            }
+            .input-field {
+                height: 45px;
+                border: 1px solid $divider;
+                outline: none;
+                font-weight: normal;
+                font-family: 'cerebri sans', sans-serif;
+                color: $primary-black;
+                transition: all 0.25s ease-in; // background: rgba(2, 117, 216, 0.01);
+                &:focus {
+                    border-color: $secondary-black
+                }
+                &:placeholder {
+                    font-weight: normal;
+                }
+            }
+            input[name="wishlistname"] {
+                border-right-width: 0;
+                border-radius: 2px 0 0 2px;
+            }
+            input[name="wishlistPurpose"] {
+                border-radius: 0px 2px 2px 0px;
+            }
+            .btn {
+                font-weight: normal;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+            }
+            .btn:nth-of-type(1) {
+                margin-right: 16px;
+                height: 50px;
+                border: 2px solid $primary-black;
+                background: transparent;
+                color: $primary-black;
+            }
+            .btn:nth-of-type(2) {
+                height: 50px;
+                border: none;
+                background: $primary-black;
+                color: $primary-white;
+                box-shadow: 0px 2px 2px $divider;
+            }
+            .modal-footer span {
+                font-size: 15px;
+                @media (min-width: 992px) {
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+    .merchant-auth-login-inner {
+        width: auto !important;
+        @media (min-width: 768px) {
+            max-width: 33.3% !important;
+        }
+    }
+}

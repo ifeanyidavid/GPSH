@@ -1,0 +1,27 @@
+body {
+    background-color: $primary-white;
+  }
+  
+  .form-container {
+    .form-signin {
+      .form-control{
+        font-family: $font-family;
+        border-radius: 2px;
+        height: 46px;
+      }
+      .password-container{
+          position: relative;
+
+          .show-password-trigger{
+            font-size: 10px;
+            font-weight: 700;
+            color: $primary-black;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: absolute;
+            top: -28px;
+            right: 15px;
+          }
+      }
+    }
+  }

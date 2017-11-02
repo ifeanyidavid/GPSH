@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="assets/css/template.css">
+    <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/line-awesome.min.css">
 </head>
 
@@ -129,10 +129,10 @@
                         <div class="row mb-3">
                             <div class="col-12">
                                 <input type="password" class="form-control input-field" placeholder="Password" id="password">
-                                <input type="checkbox" name="showpassword" id="showpassword" onchange="revealPassword(this)">
-                                <label for="showpassword" class="showpassword text-right w-100">Show password</label>
+                                <input type="checkbox" name="showpassword" id="showpassword">
+                                <label for="showpassword" class="show-password-trigger text-right">Show</label>
                                 <meter max="4" id="password-strength-meter"></meter>
-                                <p id="password-strength-text"></p>
+                                <p id="password-strength-text" class="password-strength-text"></p>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -243,7 +243,7 @@
                         <input type="checkbox" name="revealdropdown" id="revealdropdown">
                         <label for="revealdropdown" class="revealdropdowntrigger d-flex align-items-center justify-content-between m-0">Browse by categories <i class="la la-angle-down"></i></label>
                         <ul class="overlaymenudropdown">
-                            <div class="container">
+                            <div class="container-fluid">
                                 <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-home"></i><span>Home & Garden</span></a></div>
                                 <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-plane"></i><span>Travel & Accomodation</span></a></div>
                                 <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-cutlery"></i><span>Food & Drinks</span></a></div>
@@ -894,6 +894,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <!-- FOOTER -->
@@ -1040,11 +1041,26 @@
 
         function revealPassword(check_box){
             var password_field = document.getElementById('password');
-            
+            console.log(this);
             if(check_box.checked){
                 password_field.setAttribute("type","text");
             }else{
                 password_field.setAttribute("type","password");
+            }
+        }
+
+
+        var show_password_trigger = document.querySelector('.show-password-trigger');
+        show_password_trigger.addEventListener('click', revealPassword);
+        function revealPassword(){
+            var password_field = document.querySelector('#password');
+            var reveal_password_trigger = document.querySelector('#showpassword');
+            if(reveal_password_trigger.checked){
+                password_field.setAttribute("type","text");
+                this.innerText = "hide";
+            }else{
+                password_field.setAttribute("type","password");
+                this.innerText = "show";
             }
         }
     </script>

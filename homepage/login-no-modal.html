@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giftplush</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+</head>
+
+<body class="reset-password-body">
+<!-- MOBILE MENU -->
+<input type="checkbox" id="navmenutoggle">
+<div class="overlaymenu overlaymenu-slidedown">
+    <div class="container-fluid p-3 p-md-4">
+        <div class="row mb-5">
+            <div class="col-12 d-flex align-items-center overlaymenuheader">
+                <label for="navmenutoggle" class="toggle mb-0 mr-3 d-xl-none">
+                                <i class="la la-close"></i>                                    
+                            </label>
+                <a href="index_new.html" class="logo">Giftplush</a>
+            </div>
+        </div>
+        <div class="row link">
+            <div class="col-12">
+                <a href="#">Home</a>
+            </div>
+        </div>
+        <div class="row link">
+            <div class="col-12">
+                <label for="loginModal">Sign in</label>
+            </div>
+        </div>
+        <div class="row link">
+            <div class="col-12">
+                <label for="loginModal">Sign Up</label>
+            </div>
+        </div>
+        <hr>
+        <div class="row link">
+            <div class="col-12">
+                <ul class="overlaymenudropdowntrigger p-0 m-0">
+                    <input type="checkbox" name="revealdropdown" id="revealdropdown">
+                    <label for="revealdropdown" class="revealdropdowntrigger d-flex align-items-center justify-content-between m-0">Browse by categories <i class="la la-angle-down"></i></label>
+                    <ul class="overlaymenudropdown">
+                        <div class="container-fluid">
+                            <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-home"></i><span>Home & Garden</span></a></div>
+                            <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-plane"></i><span>Travel & Accomodation</span></a></div>
+                            <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-cutlery"></i><span>Food & Drinks</span></a></div>
+                            <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-user-md"></i><span>Health & Beauty</span></a></div>
+                            <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-glass"></i><span>Days out</span></a></div>
+                            <div class="row"><a href="category.html" class="col-12 nav-link d-flex align-items-center"><i class="la la-female"></i><span>Women's fashion</span></a></div>
+                            <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-male"></i><span>Men's fashion</span></a></div>
+                            <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-plug"></i><span>Electronics</span></a></div>
+                            <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-credit-card"></i><span>Finance</span></a></div>
+                            <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-wrench"></i><span>Utilities & Services</span></a></div>
+                            <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-shopping-cart"></i><span>Department stores</span></a></div>
+                            <div class="row"><a href="#" class="col-12 nav-link d-flex align-items-center"><i class="la la-graduation-cap"></i><span>Students</span></a></div>
+                        </div>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+    <nav class="container-fluid navigation p-3 p-md-4">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-4 col-xl-2 nav-left">
+                <div class="branding d-flex align-items-center">
+                    <label for="navmenutoggle" class="toggle mb-0 mr-3 d-xl-none">
+                        <i class="la la-navicon"></i>
+                    </label>
+                    <a href="index_new.html" class="logo">Giftplush</a>
+                </div>
+            </div>
+
+            <div class="col-5 push-5 nav-right d-xl-flex d-none align-items-center justify-content-end">
+
+                <a href="#" class="mr-5">Help</a>
+                <select class="d-flex align-items-center justify-content-center m-0 w-25 pr-3 form-control">Change Language <i class="la la-angle-down ml-5"></i>
+                    <option value="en">English</option>
+                    <option value="fr">Francais</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container form-container">
+    <div class="row">
+        <div class="col-12">
+            <form class="form-signin">
+                <h2 class="form-signin-heading mb-3">Login</h2>
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" id="inputEmail" class="form-control mb-3" placeholder="Email address" required autofocus>
+                <input type="password" id="inputPassword" class="form-control password-signin" placeholder="Password" required>
+                <div class="password-container">
+                    <input type="checkbox" name="revealPassword" id="reveal_password_trigger" class="show-password d-none">
+                    <label for="reveal_password_trigger" class="show-password-trigger m-0">SHOW</label>
+                </div>
+                <button class="btn btn-lg btn-reset-password btn-block mt-4 float-right" type="submit">Sign in</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- /container -->
+
+<script>
+    var show_password_trigger = document.querySelector('.show-password-trigger');
+    show_password_trigger.addEventListener('click', revealPassword);
+    function revealPassword(){
+        var password_field = document.querySelector('.password-signin');
+        var reveal_password_trigger = document.querySelector('.show-password');
+        if(reveal_password_trigger.checked){
+            password_field.setAttribute("type","text");
+            this.innerText = "hide";
+        }else{
+            password_field.setAttribute("type","password");
+            this.innerText = "show";
+        }
+    }
+</script> 
+</body>
+    
+</html>
