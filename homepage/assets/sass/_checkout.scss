@@ -219,8 +219,8 @@
             input[type="radio"] {
                 display: none;
                 &:checked+.btn-toggle {
-                    background: $primary-black;
-                    color: $primary-white; // border: none;
+                    background: $divider;
+                    color: $primary-black;
                 }
                 &:checked + .delivery-type{
                     display: block;
@@ -483,10 +483,13 @@
             font-family: $font-family;
         }
     }
-}
-
-.similar {
-    .voucher-container .voucher-image {
-        padding-top: 100% !important;
+    .voucher-body{
+        padding-left: 0px;
+        padding-right: 0px;
+        .similar {
+            .voucher-container .voucher-image {
+                padding-top: 100% !important;
+            }
+        }
     }
 }

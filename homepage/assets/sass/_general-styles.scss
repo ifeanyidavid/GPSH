@@ -19,6 +19,7 @@ body {
 // HEADER
 // NAVIGATION
 .header {
+    // height: 95vh;
     .navigation {
         .nav-home {
             justify-content: space-between !important;
@@ -67,6 +68,7 @@ body {
                 }
                 +.la {
                     position: absolute;
+                    transform: rotate(270deg);
                 }
             }
             i.la {
@@ -83,19 +85,19 @@ body {
             a,
             label {
                 font-size: 13px;
-                color: $primary-black;
-                font-weight: normal;
+                font-weight: 600;
+                color: $secondary-black;
                 text-decoration: none;
             }
             .category-chooser {
                 font-size: 13px;
-                color: $primary-black;
-                font-weight: normal;
+                font-weight: 600;
+                color: $secondary-black;
                 transition: all 0.25s ease-in;
                 cursor: pointer;
                 position: relative;
                 i.la:before {
-                    color: $primary-black;
+                    color: $secondary-black;
                     font-weight: 800;
                     margin-left: 0.5em;
                 }
@@ -110,9 +112,10 @@ body {
                     }
                 }
                 .mega-dropdown {
-                    width: 500px;
-                    max-width: 550px;
-                    padding: 8px;
+                    max-width: 700px;
+                    width: auto;
+                    padding: 16px;
+                    left: -308px;
                     background: $primary-white;
                     box-shadow: 0 4px 4px $divider;
                     padding-top: 24px;
@@ -120,44 +123,48 @@ body {
                     visibility: hidden;
                     opacity: 0;
                     position: absolute;
-                    left: -166px;
                     z-index: 10;
                     transition: all 0.25s ease-in;
                     pointer-events: visible;
                     .nav-link {
-                        margin-bottom: 0.5rem;
+                        margin-bottom: 1.5rem;
+                        border-radius: 4px;
+                        padding-bottom: 8px;
+                        padding-top: 8px;
                         cursor: pointer;
                         &:hover {
                             background: #f7f7f7;
                         }
                         i.la:before {
                             font-size: 20px;
-                            color: $primary-white;
+                            color: #6D6D6D;
                             font-weight: 300;
                             margin-right: 0.5em;
-                            background: $primary-black;
+                            background: #eee;
                             border-radius: 50%;
-                            padding: 4px;
+                            padding: 5px;
                             -webkit-font-smoothing: antialiased;
                         }
                         i.la-plane {
                             transform: rotate(45deg);
                         }
                         span {
-                            font-weight: normal;
+                            font-weight: 500;
                             color: $secondary-black;
-                            font-size: 14px;
+                            font-size: 15px;
                         }
                     }
                 }
             }
             .access {
-                background: $primary-black;
+                // background: $primary-black;
                 height: 42px;
                 width: 140px;
                 border-radius: 4px;
-                color: $primary-white;
-                box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+                background: #eee;
+                color: #6D6D6D;
+                box-shadow: none;
+                // box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
                 cursor: pointer;
             }
         }
@@ -191,79 +198,83 @@ body {
     }
     .hero {
         margin-top: 3rem;
+
+        @media (min-width: 576px) {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        @media (min-width: 768px) {
+            padding-left: 45px;
+            padding-right: 45px;
+        }
         @media (min-width: 992px) {
             margin-top: 100px;
+            padding-left: 90px;
+            padding-right: 90px;
         }
-        .hero-text h1 {
-            font-weight: 800;
-            font-size: 45px;
-            line-height: 60px; // font-size: 28px;
-            // font-weight: normal;
-            // line-height: 36px;
-            color: $primary-black;
-            @media (min-width: 992px) {
-                font-size: 48px;
-                line-height: 70px;
+        .hero-text-wrapper{
+            h1 {
+                font-size: 45px;
+                line-height: 60px; 
+                color: #404044;
+                font-weight: 500;
+                font-size: 42px;
+                // font-size: 28px;
+                // font-weight: normal;
+                // line-height: 36px;
+                // color: $primary-black;
+                @media (min-width: 992px) {
+                    font-size: 48px;
+                    line-height: 70px;
+                }
+            }
+            .hero-text-wrapper__help-text{
+                font-size: 16px;
+                font-weight: normal;
+                color: $secondary-black;
             }
         }
         .hero-search {
-            width: 90vw;
-            @media (min-width: 992px) {
-                width: 95vw;
-            }
-            .input-group {
-                width: 100%;
+            .search-wrapper {
+                height: 54px;
+                position: relative;
                 @media (min-width: 992px) {
-                    width: 50%;
+                    height: 64px;
                 }
-                input[type="text"] {
-                    height: 42px;
-                    background: #fff;
-                    border: 1px solid rgba(0, 0, 0, 0.12);
-                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+                .search-wrapper__search-field {
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: normal;
+                    background: #eee;
+                    border: none;
+                    border-radius: 2px;
+                    box-shadow: none;
+                    color: $secondary-black;
                     font-family: $font-family;
-                    font-weight: 800;
-                    font-size: 15px;
-                    color: $primary-black;
                     outline: none;
                     transition: all 0.25s ease;
+                    padding-left: 64px;
+                    z-index: 0 !important;
                     &::placeholder {
                         color: $disabled-black;
-                        font-size: 15px;
-                        font-weight: normal;
+                        font-size: 19px;
                     }
-                    @media (min-width: 768px) {
-                        height: 60px;
-                        font-size: 24px;
-                        &::placeholder {
-                            font-size: 19px;
-                            vertical-align: middle;
-                        }
+                    &:hover {
+                        z-index: 0 !important;
                     }
                 }
-                .search-btn {
-                    width: 65px;
-                    border-radius: 0 4px 4px 0;
-                    border: none;
-                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
-                    position: relative;
+                .search-wrapper__search-icon{
+                    position: absolute;
                     z-index: 2;
-                    background: $primary-black;
-                    color: $primary-white;
-                    font-family: $font-family;
-                    font-size: 19px;
-                    outline: none;
-                    cursor: pointer;
-                    i.la {
-                        transform: rotate(270deg);
-                    }
-                    i.la:before {
-                        color: $primary-white;
-                        font-size: 24px;
-                        font-weight: 800;
-                    }
-                    @media (min-width: 768px) {
-                        width: 150px;
+                    top: 19px;
+                    left: 16px;
+                    transform: rotate(270deg);
+
+                    &:before{
+                        font-size: 28px;
+                        font-weight: 500;
+                        color: $secondary-black;
                     }
                 }
             }

@@ -77,10 +77,11 @@
                     margin-bottom: 8px;
                     i.la:before {
                         font-size: 20px;
-                        color: $primary-white;
+                        font-weight: 300;
+                        color: #6D6D6D;
                         margin-right: 15px;
-                        background: $primary-black;
-                        padding: 4px;
+                        background: $divider;
+                        padding: 5px;
                         border-radius: 50%;
                         -webkit-font-smoothing: antialiased;
                     }
