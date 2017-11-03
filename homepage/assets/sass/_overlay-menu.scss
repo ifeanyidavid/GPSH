@@ -45,8 +45,9 @@
             #revealdropdown {
                 display: none;
                 &:checked~.overlaymenudropdown {
-                    visibility: visible;
-                    opacity: 1; // display: block;
+                    // visibility: visible;
+                    // opacity: 1; // 
+                    display: block;
                 }
                 &:checked+.revealdropdowntrigger>i.la {
                     transform: rotate(180deg);
@@ -65,8 +66,9 @@
             }
             .overlaymenudropdown {
                 width: 100%;
-                visibility: hidden;
-                opacity: 0; // display: none;
+                // visibility: hidden;
+                // opacity: 0; //
+                display: none;
                 padding: 16px 0;
                 background: #fcfcfc;
                 transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
@@ -107,16 +109,36 @@
     transform: translateY(-100%);
     -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
     transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+
+    .overlaymenu-wrapper{
+        padding-top: 65px;
+    }
 }
 
-#navmenutoggle {
+.navmenutoggle {
     display: none;
-    &:checked+.overlaymenu-slidedown {
+    &:checked + .overlaymenu-slidedown {
         visibility: visible;
         opacity: 1;
         -webkit-transform: translateY(0%);
         transform: translateY(0%);
         -webkit-transition: -webkit-transform 0.4s ease-in-out;
         transition: transform 0.4s ease-in-out;
+    }
+    &:checked ~ .overlaymenu-slidedown .overlaymenu-wrapper{
+        padding-top: 120px !important;
+    }
+    &:checked ~ .header .nav-home-fixed .nav-home .search-container-mobile{
+        display: block !important;
+    }
+    &:checked ~ .header .nav-home-fixed .nav-home .nav-left .branding .toggle{
+        i.la-navicon{
+            visibility: hidden !important;
+            opacity: 0 !important;
+        }
+        i.la-close{
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
     }
 }

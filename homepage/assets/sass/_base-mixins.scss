@@ -1,3 +1,6 @@
 @mixin pt($padding){
     padding-top: $padding !important;
 }
+@mixin mt($margin){
+    margin-top: $margin !important;
+}

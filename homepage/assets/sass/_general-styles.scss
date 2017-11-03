@@ -29,11 +29,24 @@ body {
         }
         .nav-left {
             .toggle {
+                i.la{
+                    position: relative;
+                    top: 0px;
+                }
+                i.la-navicon{
+                    visibility: visible;
+                    opacity: 1;
+                    @include transition(all 0.3s);
+                }
+                i.la-close{
+                    left: -28px;
+                    visibility: hidden;
+                    opacity: 0;
+                    @include transition(all 0.3s);
+                }
                 i.la:before {
                     font-size: 24px;
                     color: $primary-black;
-                    position: relative;
-                    top: 3px;
                 }
             }
             .logo {
@@ -154,6 +167,50 @@ body {
                             font-size: 15px;
                         }
                     }
+                }
+            }
+            .account-dropdown{
+                position: relative;
+                cursor: pointer;
+                i.la:before{
+                    font-size: 24px;
+                    font-weight: 800;
+                    background: #eee;
+                    color: $primary-black;
+                    padding: 8px;
+                    border-radius: 50%;
+                }
+                .account-wrapper{
+                    position: absolute;
+                    right: 0px;
+                    top: 34px;
+                    display: none;
+                    @include padding(8px 0 8px 0);
+                    border-radius: 4px;
+                    background: $primary-white;
+                    box-shadow: 0px 4px 16px rgba(0,0,0,0.16);
+                    width: 180px;
+                    max-width: 300px;
+                    .account-wrapper__link{
+                        display: block;
+                        color: $secondary-black;
+                        font-size: 15px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        border-radius: 2px;
+                        padding: 8px 16px;
+                        hr{
+                            background: $divider;
+                        }
+                        &:hover{
+                            background: $divider;
+                        }
+                    }
+                }
+            }
+            .account-dropdown-trigger{
+                &:checked ~ .account-dropdown .account-wrapper{
+                    display: block;
                 }
             }
             .access {
