@@ -10,36 +10,40 @@
 .mt-200{
     margin-top: 200px !important;
 }
-.header{
-    .nav-fixed{
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 999;
-        background: $primary-white;
-        box-shadow: none;
+.nav-fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    background: $primary-white;
+    box-shadow: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition:  all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    .search-container, .search-container-mobile{
+        visibility: hidden;
+        opacity: 0;
         -webkit-transition: all 0.3s;
         -moz-transition: all 0.3s;
-        -ms-transition:  all 0.3s;
+        -ms-transition: all 0.3s;
         -o-transition: all 0.3s;
         transition: all 0.3s;
-
-        .search-container, .search-container-mobile{
-            visibility: hidden;
-            opacity: 0;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
-        }
     }
-    .revealSearch{
-        background: $primary-white !important;
-        box-shadow: 0px 1px 4px rgba(0,0,0,0.10);
-        .nav-home .search-container, .nav-home .search-container-mobile{
-            visibility: visible;
-            opacity: 1;
-        }
+}
+.nav-fixed--with-searchbar{
+    .search-container, .search-container-mobile{
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+.revealSearch{
+    background: $primary-white !important;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.10);
+    .nav-home .search-container, .nav-home .search-container-mobile{
+        visibility: visible;
+        opacity: 1;
     }
 }

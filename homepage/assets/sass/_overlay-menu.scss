@@ -76,7 +76,7 @@
                 left: 0;
                 top: 40px;
                 .nav-link {
-                    margin-bottom: 8px;
+                    margin-bottom: 1.5rem;
                     i.la:before {
                         font-size: 20px;
                         font-weight: 300;
@@ -128,10 +128,10 @@
     &:checked ~ .overlaymenu-slidedown .overlaymenu-wrapper{
         padding-top: 120px !important;
     }
-    &:checked ~ .header .nav-home-fixed .nav-home .search-container-mobile{
+    &:checked ~ .nav-fixed .nav-home .search-container-mobile{
         display: block !important;
     }
-    &:checked ~ .header .nav-home-fixed .nav-home .nav-left .branding .toggle{
+    &:checked ~ .nav-fixed .nav-home .nav-left .branding .toggle{
         i.la-navicon{
             visibility: hidden !important;
             opacity: 0 !important;
