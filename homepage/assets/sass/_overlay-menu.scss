@@ -11,33 +11,33 @@
     overflow: auto;
     visibility: hidden;
     opacity: 0;
-    .overlaymenuheader {
-        .toggle {
-            i.la:before {
-                font-size: 24px;
-                color: $primary-black;
-                position: relative;
-                top: 3px;
-            }
-        }
-        .logo {
-            font-size: 22px;
-            font-weight: normal;
-            text-transform: uppercase;
-            color: $primary-black;
-            text-decoration: none;
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
+    // .overlaymenuheader {
+    //     .toggle {
+    //         i.la:before {
+    //             font-size: 24px;
+    //             color: $primary-black;
+    //             position: relative;
+    //             top: 3px;
+    //         }
+    //     }
+    //     .logo {
+    //         font-size: 22px;
+    //         font-weight: 700;
+    //         text-transform: uppercase;
+    //         color: $primary-black;
+    //         text-decoration: none;
+    //         &:hover {
+    //             text-decoration: none;
+    //         }
+    //     }
+    // }
     .link {
         margin-bottom: 24px;
         a,
         label {
             color: $primary-black;
             font-size: 19px;
-            font-weight: 300;
+            font-weight: normal;
             text-decoration: none;
         }
         .overlaymenudropdowntrigger {
@@ -56,7 +56,7 @@
             .revealdropdowntrigger {
                 color: $primary-black;
                 font-size: 19px;
-                font-weight: 300;
+                font-weight: normal;
                 i.la {
                     color: $secondary-black;
                     font-size: 16px;
@@ -70,7 +70,7 @@
                 // opacity: 0; //
                 display: none;
                 padding: 16px 0;
-                background: #fcfcfc;
+                // background: #fcfcfc;
                 transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
                 position: absolute;
                 left: 0;
@@ -88,7 +88,7 @@
                         -webkit-font-smoothing: antialiased;
                     }
                     span {
-                        font-size: 15px;
+                        font-size: 16px;
                         color: $secondary-black;
                         font-weight: normal;
                         white-space: nowrap;

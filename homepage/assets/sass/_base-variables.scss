@@ -1,6 +1,34 @@
+@font-face {
+    font-family: "Giftplush-Circular";
+    src: url("../fonts/Sailec Thin.otf") format("OpenType");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {    
+    font-family: "Giftplush-Circular";
+    src: url("../fonts/CircularStd-Book.otf") format("OpenType");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Giftplush-Circular";
+    src: url("../fonts/CircularStd-Medium.otf") format("OpenType");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Giftplush-Circular";
+    src: url("../fonts/CircularStd-Bold.otf") format("OpenType");
+    font-weight: 700;
+    font-style: normal;
+}
+
 // COLORS
-$primary-black: #404044;;
-$secondary-black: rgba(0, 0, 0, 0.54);
+$primary-black: #02022d;
+$secondary-black: rgba(2, 2, 45, 0.64);
 $disabled-black: rgba(0, 0, 0, 0.38);
 $divider: #eee;
 $primary-white: rgba(255, 255, 255, 1);
@@ -13,8 +41,8 @@ $active-icons-white: rgba(255, 255, 255, 1);
 $inactive-icons-white: rgba(255, 255, 255, .50);
 
 // FONTS
-$font-family: 'Sailec',
-'Cerebri Sans',
+$font-family: 'Giftplush-Circular',
+'Sailec',
 'Helvetica',
 'Roboto',
 sans-serif;

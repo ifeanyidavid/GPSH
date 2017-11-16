@@ -6,26 +6,28 @@
     }
     .headline {
         font-size: 24px;
-        font-weight: normal;
+        font-weight: 700;
+        line-height: 32px;
+        margin-bottom: 16px;
     }
     .subtext {
-        font-size: 14px;
+        font-size: 15px;
         color: $secondary-black;
-        font-weight: 300;
+        font-weight: normal;
     }
     .box {
         background: $primary-white;
         border: 1px solid $divider;
-        border-radius: 8px;
+        border-radius: 2px;
         @media (min-width: 768px) {
             max-width: 50%;
         }
         .header-img {
             i:before {
-                background: $primary-black;
+                background: $divider;
                 padding: 24px;
                 border-radius: 50%;
-                color: $primary-white;
+                color: $secondary-black;
                 font-size: 32px;
                 line-height: normal;
             }
@@ -56,10 +58,10 @@
         width: auto;
         box-sizing: border-box;
         background: #fff;
-        border-radius: 8px;
+        border-radius: 2px;
         .main-heading {
             font-size: 28px;
-            font-weight: 800;
+            font-weight: 700;
             color: $primary-black;
             margin: 0;
 

@@ -6,7 +6,7 @@
         width: 100%;
         max-width: 100%;
         z-index: 3;
-        top: 66px;
+        top: 64px !important;
         box-shadow: 0 3px 20px rgba(156, 160, 171, 0.25) !important;
         border-radius: 2px;
         @include transition(all ease 0.3s);
@@ -16,29 +16,38 @@
             top: 55px;
         }
 
-        .search-suggestions-wrapper__recent-search{
-            .search-suggestions-wrapper__recent-search-container--title{
-                font-size: 14px;
-                font-weight: 700;
-                color: $primary-black;
-            }
-            .search-suggestions-wrapper__recent-search-container--description{
-                font-size: 18px;
-                font-weight: normal;
-                color: $secondary-black;
-                border-radius: 2px;
-                display: block;
-                margin-bottom: 16px;
-                @include transition(all ease 0.3s);
-                @include padding(16px);
+        .search-suggestions-wrapper--title{
+            font-size: 14px;
+            font-weight: 700;
+            color: $primary-black;
+        }
+        .search-suggestions-wrapper--description{
+            font-size: 16px;
+            font-weight: 500;
+            color: $secondary-black;
+            border-radius: 2px;
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+            @include transition(all ease 0.3s);
+            @include padding(8px);
 
-                @media (max-width: 576px){
-                    font-size: 16px;
-                }
-                &:hover{
-                    background: $divider;
-                    text-decoration: none;
-                }
+            @media (max-width: 576px){
+                font-size: 16px;
+            }
+            &:hover{
+                background: $divider;
+                text-decoration: none;
+            }
+        }
+
+        .branding > .powered-by{
+            font-size: 12px;
+            font-weight: normal;
+            color: $secondary-black !important;
+            text-transform: uppercase;
+            .algolia-logo{
+                font-weight: 700;
             }
         }
     }   

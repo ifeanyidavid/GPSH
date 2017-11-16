@@ -1,60 +1,279 @@
-.checkout-container {
-    // WEB
-    .left-col {
-        .section {
-            // border-top: 1px solid #dbdbdb;
-            // border-bottom: 1px solid #dbdbdb;
-            .checkout-header {
-                .voucher-title {
-                    font-size: 36px;
-                    font-weight: 700;
-                    color: $primary-black;
-                }
-                .vouchertowishlist {
-                    font-size: 15px;
-                    font-weight: 500;
-                    color: $secondary-black;
-                    cursor: pointer;
-                    i.la:before {
-                        font-size: 22px;
+    .checkout-container {
+        // WEB
+        .left-col {
+            .section {
+                // border-top: 1px solid #dbdbdb;
+                // border-bottom: 1px solid #dbdbdb;
+                .checkout-header {
+                    .voucher-title {
+                        font-size: 36px;
+                        font-weight: 700;
+                        color: $primary-black;
+                    }
+                    .vouchertowishlist {
+                        font-size: 15px;
                         font-weight: 500;
                         color: $secondary-black;
-                        transition: color .5 ease;
-                    }
-                    &:hover {
+                        cursor: pointer;
                         i.la:before {
-                            color: $primary-black;
+                            font-size: 22px;
+                            font-weight: 500;
+                            color: $secondary-black;
+                            transition: color .5 ease;
+                        }
+                        &:hover {
+                            i.la:before {
+                                color: $primary-black;
+                            }
+                        }
+                    }
+                    .voucher-info {
+                        color: $secondary-black;
+                        font-size: 13px;
+                        font-weight: 500;
+                        i.la:before {
+                            color: $active-icons-black;
+                            font-size: 20px;
+                            font-weight: 500;
+                        }
+                        .bought {
+                            i.la {
+                                transform: rotate(135deg);
+                            }
                         }
                     }
                 }
-                .voucher-info {
-                    color: $secondary-black;
-                    font-size: 13px;
+                .showcase {
+                    background-image: url('../images/greybox.png');
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    padding-top: 120%;
+                }
+                .section-header {
+                    font-size: 19px;
                     font-weight: 500;
-                    i.la:before {
-                        color: $active-icons-black;
-                        font-size: 20px;
-                        font-weight: 500;
-                    }
-                    .bought {
-                        i.la {
-                            transform: rotate(135deg);
+                    color: $primary-black;
+                }
+                .merch-desc-wrapper {
+                    .read-more-state {
+                        display: none;
+                        &:checked~.read-more-wrap .read-more-target {
+                            opacity: 1; // display: block;
+                            font-size: inherit;
+                            max-height: 999em;
+                        }
+                        ~.read-more-trigger:before {
+                            content: 'Show more';
+                        }
+                        &:checked~.read-more-trigger:before {
+                            content: 'Show less';
                         }
                     }
+                    .read-more-wrap {
+                        font-size: 16px;
+                        font-weight: normal;
+                        color: $secondary-black;
+                        line-height: 28px;
+                        .read-more-target {
+                            opacity: 0; // display: none;
+                            max-height: 0;
+                            font-size: 0;
+                            transition: opacity.25s ease, max-height.25s ease;
+                        }
+                    }
+                    .read-more-trigger {
+                        cursor: pointer;
+                        color: $primary-black;
+                        font-size: 15px;
+                        font-weight: 500;
+                        margin: 0;
+                    }
+                }
+                .maps {
+                    background-image: url('../images/greybox.png');
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    padding-top: 70%;
                 }
             }
-            .showcase {
+        }
+        .right-col {
+            .checkout-form {
+                background: $primary-white;
+                border: 1px solid $divider;
+                border-radius: 8px; // box-shadow: 0px 2px 8px $divider;
+                @media (min-width: 992px) {
+                    padding: 24px;
+                }
+                @media (min-width: 1200px) {
+                    padding: 32px;
+                }
+                .price {
+                    font-size: 24px;
+                    font-weight: 800;
+                    color: $primary-black;
+                    line-height: normal;
+                    .currency {
+                        position: relative;
+                        top: -6px;
+                        font-size: 12px;
+                        font-weight: normal;
+                        color: $primary-black;
+                    } // Medium devices (tablets, less than 992px)
+                    @media (min-width: 768px) and (max-width: 991px) {
+                        font-size: 19px;
+                    }
+                }
+                .title {
+                    font-size: 17px;
+                    font-weight: 500;
+                    color: $primary-black;
+                    margin: 0;
+                }
+                .checkout-label {
+                    color: $secondary-black;
+                    font-size: 12px;
+                    font-weight: normal;
+                    margin-bottom: 4px;
+                }
+                input[name="custom_amount"],
+                textarea {
+                    border-radius: 2px;
+                    &:focus {
+                        border: 1px solid $primary-black;
+                    }
+                }
+                input[type="text"] {
+                    padding: 13px 16px;
+                    font-family: $font-family;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: $secondary-black;
+                    &:focus {
+                        border: 1px solid $primary-black;
+                    }
+                    &::placeholder {
+                        font-size: 14px;
+                        color: $secondary-black;
+                    }
+                }
+                .input-field-1 {
+                    border-right: 0;
+                    border-radius: 2px 0 0 2px;
+                    border-color: $divider;
+                }
+                .input-field-2 {
+                    border-radius: 0 2px 2px 0;
+                    border-color: $divider;
+                }
+                .delivery.message {
+                    resize: none;
+                }
+                .btn-book {
+                    border-radius: 4px;
+                    padding: 14px;
+                    font-size: 17px;
+                    font-family: $font-family;
+                    font-weight: 700;
+                    background: #ff715b;
+                    color: $primary-white;
+                    cursor: pointer;
+                    outline: none;
+
+                    &:focus {
+                        outline: 0;
+                        -webkit-box-shadow: none;
+                        box-shadow: none;
+                    }
+                }
+                .btn-book-top {
+                    @media (min-width: 768px) and (max-width: 991px) {
+                        font-size: 14px;
+                        padding: 12px;
+                    }
+                }
+                label[class*=btn-toggle] {
+                    border: 1px solid $divider;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: normal;
+                    color: $secondary-black;
+                    cursor: pointer; // padding: 8px 8px;
+                    margin: 0;
+                    @media (min-width: 768px) and (max-width: 991px) {
+                        padding: 8px;
+                        font-size: 13px;
+                    } // Large devices (desktops, less than 1200px)
+                    @media (min-width: 992px) and (max-width: 1199px) {
+                        font-size: 12px;
+                    }
+                }
+                .btn-toggle-1 {
+                    border-right-width: 0 !important;
+                    border-radius: 4px 0 0 4px;
+                }
+                .btn-toggle-2,
+                .btn-toggle-3 {
+                    border-radius: 0px !important;
+                    border-right-width: 0 !important;
+                }
+                .btn-toggle-4 {
+                    border-radius: 0 4px 4px 0 !important;
+                }
+                .form-text {
+                    font-size: 12px;
+                    color: $disabled-black;
+                } // PRICE TOGGLES
+                input[type="radio"] {
+                    display: none;
+                    &:checked+.btn-toggle {
+                        background: $divider;
+                        color: $primary-black;
+                    }
+                    &:checked+.delivery-type {
+                        display: block;
+                    }
+                }
+                .delivery-type {
+                    display: block;
+                }
+            }
+        } // MOBILE
+        .checkout-wrapper-mobile {
+            .voucher-title {
+                font-size: 24px;
+                font-weight: 700;
+                color: $primary-black;
+            }
+            .showcase,
+            .map {
+                width: 100%;
                 background-image: url('../images/greybox.png');
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
-                padding-top: 120%;
+                padding-top: 80%;
             }
-            .section-header {
+            .offerings {
+                .offering {
+                    font-size: 15px;
+                    font-weight: normal;
+                    color: $primary-black;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                    i.la:before {
+                        font-size: 21px;
+                        font-weight: 300;
+                        color: $active-icons-black;
+                    }
+                }
+            }
+            .section-heading {
                 font-size: 19px;
                 font-weight: 500;
                 color: $primary-black;
             }
-            .merch-desc-wrapper {
+            .desc-wrapper {
                 .read-more-state {
                     display: none;
                     &:checked~.read-more-wrap .read-more-target {
@@ -73,7 +292,12 @@
                     font-size: 16px;
                     font-weight: normal;
                     color: $secondary-black;
-                    line-height: 28px;
+                    line-height: 25px;
+                    word-wrap: break-word;
+                    display: inline;
+                    -moz-text-size-adjust: 100%;
+                    -webkit-text-size-adjust: 100%;
+                    -moz-text-size-adjust: 100%;
                     .read-more-target {
                         opacity: 0; // display: none;
                         max-height: 0;
@@ -89,61 +313,150 @@
                     margin: 0;
                 }
             }
-            .maps {
-                background-image: url('../images/greybox.png');
-                background-size: 100% 100%;
-                background-repeat: no-repeat;
-                padding-top: 70%;
+            .fixed-footer {
+                background: #fff;
+                border-top: 1px solid $divider !important;
+                width: 100%;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                width: 100% !important;
+                bottom: 0px !important;
+                z-index: 1 !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+                -webkit-transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out !important;
+                -moz-transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out !important;
+                transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out !important;
+                overflow: hidden !important;
+                &.hidden {
+                    transform: translateY(100%);
+                }
+                &.showfooter {
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                }
+                .btn {
+                    padding: 15px;
+                    font-family: $font-family;
+                    font-size: 15px;
+                    font-weight: 500;
+                    border: transparent;
+                }
+                .btn-customise {
+                    border: 2px solid $primary-black;
+                    color: $primary-black;
+                    background: transparent;
+                    cursor: pointer;
+                    &:focus {
+                        border: 2px solid $primary-black;
+                        box-shadow: none;
+                    }
+                }
+                .btn-book {
+                    background: $primary-black;
+                    color: $primary-white;
+                    &:focus {
+                        border: transparent;
+                        box-shadow: none;
+                    }
+                }
             }
         }
-    }
-    .right-col {
-        .checkout-form {
+        #customise-voucher {
+            display: none;
+            &:checked+.customise-voucher {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        .customise-voucher {
             background: $primary-white;
-            border: 1px solid $divider;
-            border-radius: 8px; // box-shadow: 0px 2px 8px $divider;
-            @media (min-width: 992px) {
-                padding: 24px;
-            }
-            @media (min-width: 1200px) {
-                padding: 32px;
-            }
-            .price {
-                font-size: 24px;
-                font-weight: 800;
-                color: $primary-black;
-                line-height: normal;
-                .currency {
-                    position: relative;
-                    top: -6px;
-                    font-size: 12px;
-                    font-weight: normal;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            overflow: auto;
+            visibility: hidden;
+            opacity: 0;
+            transition: .4s ease;
+            .close {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                cursor: pointer;
+                i.la:before {
+                    font-weight: 300;
                     color: $primary-black;
-                } // Medium devices (tablets, less than 992px)
-                @media (min-width: 768px) and (max-width: 991px) {
-                    font-size: 19px;
                 }
             }
             .title {
-                font-size: 17px;
+                font-size: 22px;
+                font-weight: 700;
+                color: $primary-black;
+            }
+            .section-header h1 {
+                font-size: 19px;
                 font-weight: 500;
                 color: $primary-black;
                 margin: 0;
             }
-            .checkout-label {
+            .input_label {
                 color: $secondary-black;
                 font-size: 12px;
                 font-weight: normal;
                 margin-bottom: 4px;
             }
+            input[type="radio"] {
+                display: none;
+                &:checked+.btn-toggle {
+                    background: $divider !important;
+                    color: $primary-black !important;
+                }
+            }
+            .btn-grp {
+                .btn-price-1 {
+                    border-right-width: 0;
+                    border-radius: 4px 0 0 4px;
+                }
+                .btn-price-2,
+                .btn-price-3 {
+                    border-radius: 0px;
+                    border-right-width: 0;
+                }
+                .btn-price-4 {
+                    border-radius: 0 4px 4px 0;
+                }
+            }
+            .btn-toggle {
+                border: 2px solid $divider;
+                border-radius: 4px;
+                color: $primary-black;
+                font-size: 13px;
+                margin: 0;
+                font-weight: 500;
+                padding: 12px 8px;
+            }
+            .email-toggle {
+                border-right-width: 0;
+                border-radius: 4px 0 0 4px;
+            }
+            .sms-toggle {
+                border-radius: 0 4px 4px 0;
+            }
             input[name="custom_amount"],
+            input[name="other"],
             textarea {
                 border-radius: 2px;
                 &:focus {
                     border: 1px solid $primary-black;
                 }
             }
-            input[type="text"] {
+            input[type="text"],
+            input[type="tel"] {
                 padding: 13px 16px;
                 font-family: $font-family;
                 font-size: 14px;
@@ -169,327 +482,193 @@
             .delivery.message {
                 resize: none;
             }
-            .btn-book {
+            .btn-save {
                 border-radius: 4px;
-                padding: 14px;
-                font-size: 17px;
-                font-family: $font-family;
-                font-weight: 700;
+                padding: 15px;
                 background: $primary-black;
                 color: $primary-white;
-                cursor: pointer;
-            }
-            .btn-book-top {
-                @media (min-width: 768px) and (max-width: 991px) {
-                    font-size: 14px;
-                    padding: 12px;
-                }
-            }
-            label[class*=btn-toggle] {
-                border: 1px solid $divider;
+                font-size: 16px;
                 font-weight: 500;
-                line-height: normal;
-                color: $secondary-black;
-                cursor: pointer; // padding: 8px 8px;
-                margin: 0;
-                @media (min-width: 768px) and (max-width: 991px) {
-                    padding: 8px;
-                    font-size: 13px;
-                } // Large devices (desktops, less than 1200px)
-                @media (min-width: 992px) and (max-width: 1199px) {
-                    font-size: 12px;
-                }
+                font-family: $font-family;
             }
-            .btn-toggle-1 {
-                border-right-width: 0 !important;
-                border-radius: 4px 0 0 4px;
+        }
+       
+        .voucher-section{
+            margin-top: 100px;
+        }
+        .similar{
+            height: 345px !important;
+            @media (min-width: 768px) {
+                height: 350px !important;
             }
-            .btn-toggle-2,
-            .btn-toggle-3 {
-                border-radius: 0px !important;
-                border-right-width: 0 !important;
-            }
-            .btn-toggle-4 {
-                border-radius: 0 4px 4px 0 !important;
-            }
-            .form-text {
-                font-size: 12px;
-                color: $disabled-black;
-            } // PRICE TOGGLES
-            input[type="radio"] {
+            & .flickity-prev-next-button {
+                top: 27%;
+                background: hsla(0, 0%, 100%, 1);
+                box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.10);
                 display: none;
-                &:checked+.btn-toggle {
-                    background: $divider;
-                    color: $primary-black;
+                & .arrow {
+                    fill: rgba(51, 51, 51, 0.5);
                 }
-                &:checked + .delivery-type{
+                @media (min-width: 768px) {
                     display: block;
                 }
-            }
-            .delivery-type{
-                display: block;
-            }
-        }
-    } // MOBILE
-    .checkout-wrapper-mobile {
-        .voucher-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: $primary-black;
-        }
-        .showcase,
-        .map {
-            width: 100%;
-            background-image: url('../images/greybox.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            padding-top: 80%;
-        }
-        .offerings {
-            .offering {
-                font-size: 15px;
-                font-weight: normal;
-                color: $primary-black;
-                &:last-of-type {
-                    margin-bottom: 0;
+                &.next {
+                    right: -18px;
                 }
-                i.la:before {
-                    font-size: 21px;
-                    font-weight: 300;
-                    color: $active-icons-black;
+                &.previous {
+                    left: -18px;
                 }
             }
-        }
-        .section-heading {
-            font-size: 19px;
-            font-weight: 500;
-            color: $primary-black;
-        }
-        .desc-wrapper {
-            .read-more-state {
-                display: none;
-                &:checked~.read-more-wrap .read-more-target {
-                    opacity: 1; // display: block;
-                    font-size: inherit;
-                    max-height: 999em;
-                }
-                ~.read-more-trigger:before {
-                    content: 'Show more';
-                }
-                &:checked~.read-more-trigger:before {
-                    content: 'Show less';
+            & .flickity-viewport {
+                position: absolute;
+                width: 100%;
+                @media (min-width: 768px) {
+                    cursor: pointer;
                 }
             }
-            .read-more-wrap {
-                font-size: 16px;
-                font-weight: normal;
-                color: $secondary-black;
-                line-height: 25px;
-                word-wrap: break-word;
-                display: inline;
-                -moz-text-size-adjust: 100%;
-                -webkit-text-size-adjust: 100%;
-                -moz-text-size-adjust: 100%;
-                .read-more-target {
-                    opacity: 0; // display: none;
-                    max-height: 0;
-                    font-size: 0;
-                    transition: opacity.25s ease, max-height.25s ease;
+            .carousel-cell {
+                height: 100%;
+                max-width: 100%;
+                position: relative;
+                width: 85%;
+                min-height: 1px;
+                padding-right: 16px;
+                padding-bottom: 24px;
+                transition: all .2s ease;
+                @media (min-width: 768px) {
+                    width: 50%;
+                }
+                @media (min-width: 1200px) {
+                    width: 32%;
+                    padding-right: 24px;
+                    padding-bottom: 24px;
+                }
+                .voucher {
+                    text-decoration: none;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background: #fff;
+                    box-shadow: 0 0px 34px rgba(0, 0, 0, 0.12);
+                    .voucher-image {
+                        border-radius: 0;
+                        width: 100%;
+                        height: 50%;
+                        @media (min-width: 768px) {
+                            height: 60%;
+                        }
+                        &.image-1 {
+                            background: url(../images/1.jpg);
+                            background-size: 100% 100%;
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-position: 50% 50%;
+                        }
+                        &.image-2 {
+                            background: url(../images/2.jpg);
+                            background-size: 100% 100%;
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-position: 50% 50%;
+                        }
+                        &.image-3 {
+                            background: url(../images/3.jpg);
+                            background-size: 100% 100%;
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-position: 50% 50%;
+                        }
+                        &.image-4 {
+                            background: url(../images/4.jpg);
+                            background-size: 100% 100%;
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-position: 50% 50%;
+                        }
+                        &.image-5 {
+                            background: url(../images/5.jpg);
+                            background-size: 100% 100%;
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-position: 50% 50%;
+                        }
+                        &.image-6 {
+                            background: url(../images/6.jpg);
+                            background-size: 100% 100%;
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-position: 50% 50%;
+                        }
+                        .addToWishlist {
+                            position: absolute;
+                            top: 10px;
+                            right: 35px;
+                            cursor: pointer;
+                            &:hover>i.la {
+                                color: $primary-black;
+                            }
+                            i.la {
+                                color: $secondary-black;
+                                font-size: 32px;
+                                transition: all 0.25s ease-in-out;
+                            }
+                        }
+                    }
+                    .voucher-details__wrapper {
+                        height: calc(100% - 50%);
+                        width: 100%;
+                        padding: 16px;
+                        @media (min-width: 768px) {
+                            height: calc(100% - 60%);
+                        }
+                        .voucher-name {
+                            padding-top: 0px !important;
+                            padding-bottom: 0px !important;
+                            color: $primary-black !important;
+                            max-height: 56px !important;
+                            overflow: hidden !important;
+                            text-overflow: ellipsis !important;
+                            display: -webkit-box !important;
+                            -webkit-line-clamp: 2 !important;
+                            -webkit-box-orient: vertical !important;
+                            margin-bottom: 6px !important;
+                            font-weight: 500;
+                            font-size: 16px;
+                            @media (min-width: 768px) {
+                                font-size: 16px;
+                            }
+                        }
+                        .voucher-tags .v-tag {
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            font-weight: 700;
+                            color: $secondary-black;
+                            margin-bottom: 6px;
+                        }
+                        .voucher-desc p {
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            color: $secondary-black;
+                            font-weight: 500;
+                            font-size: 14px;
+                            margin: 0;
+                        }
+                        .voucher-desc .total-bought {
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            font-weight: 500;
+                            margin-top: 6px;
+                            display: block;
+                            color: #2D5D87;
+                        }
+                    }
                 }
             }
-            .read-more-trigger {
+            .flickity-enabled.is-draggable .flickity-viewport {
                 cursor: pointer;
-                color: $primary-black;
-                font-size: 15px;
-                font-weight: 500;
-                margin: 0;
-            }
-        }
-        .fixed-footer {
-            background: #fff;
-            border-top: 1px solid $divider !important;
-            width: 100%;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            width: 100% !important;
-            bottom: 0px !important;
-            z-index: 1 !important;
-            opacity: 0 !important;
-            visibility: hidden !important;
-            -webkit-transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out !important;
-            -moz-transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out !important;
-            transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out !important;
-            overflow: hidden !important;
-            &.hidden {
-                transform: translateY(100%);
-            }
-            &.showfooter {
-                opacity: 1 !important;
-                visibility: visible !important;
-            }
-            .btn {
-                padding: 15px;
-                font-family: $font-family;
-                font-size: 15px;
-                font-weight: 500;
-                border: transparent;
-            }
-            .btn-customise {
-                border: 2px solid $primary-black;
-                color: $primary-black;
-                background: transparent;
                 cursor: pointer;
-                &:focus {
-                    border: 2px solid $primary-black;
-                    box-shadow: none;
-                }
-            }
-            .btn-book {
-                background: $primary-black;
-                color: $primary-white;
-                &:focus {
-                    border: transparent;
-                    box-shadow: none;
-                }
+                cursor: pointer;
             }
         }
     }
-    #customise-voucher {
-        display: none;
-        &:checked+.customise-voucher {
-            visibility: visible;
-            opacity: 1;
-        }
-    }
-    .customise-voucher {
-        background: $primary-white;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 10;
-        overflow: auto;
-        visibility: hidden;
-        opacity: 0;
-        transition: .4s ease;
-        .close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            cursor: pointer;
-            i.la:before {
-                font-weight: 300;
-                color: $primary-black;
-            }
-        }
-        .title {
-            font-size: 22px;
-            font-weight: 700;
-            color: $primary-black;
-        }
-        .section-header h1 {
-            font-size: 19px;
-            font-weight: 500;
-            color: $primary-black;
-            margin: 0;
-        }
-        .input_label {
-            color: $secondary-black;
-            font-size: 12px;
-            font-weight: normal;
-            margin-bottom: 4px;
-        }
-        input[type="radio"] {
-            display: none;
-            &:checked+.btn-toggle {
-                background: $divider !important;
-                color: $divider !important;
-            }
-        }
-        .btn-grp {
-            .btn-price-1 {
-                border-right-width: 0;
-                border-radius: 4px 0 0 4px;
-            }
-            .btn-price-2,
-            .btn-price-3 {
-                border-radius: 0px;
-                border-right-width: 0;
-            }
-            .btn-price-4 {
-                border-radius: 0 4px 4px 0;
-            }
-        }
-        .btn-toggle {
-            border: 2px solid $primary-black;
-            border-radius: 4px;
-            color: $primary-black;
-            font-size: 13px;
-            margin: 0;
-            font-weight: 500;
-            padding: 12px 8px;
-        }
-        .email-toggle {
-            border-right-width: 0;
-            border-radius: 4px 0 0 4px;
-        }
-        .sms-toggle {
-            border-radius: 0 4px 4px 0;
-        }
-        input[name="custom_amount"],
-        input[name="other"],
-        textarea {
-            border-radius: 2px;
-            &:focus {
-                border: 1px solid $primary-black;
-            }
-        }
-        input[type="text"], input[type="tel"] {
-            padding: 13px 16px;
-            font-family: $font-family;
-            font-size: 14px;
-            font-weight: 500;
-            color: $secondary-black;
-            &:focus {
-                border: 1px solid $primary-black;
-            }
-            &::placeholder {
-                font-size: 14px;
-                color: $secondary-black;
-            }
-        }
-        .input-field-1 {
-            border-right: 0;
-            border-radius: 2px 0 0 2px;
-            border-color: $divider;
-        }
-        .input-field-2 {
-            border-radius: 0 2px 2px 0;
-            border-color: $divider;
-        }
-        .delivery.message {
-            resize: none;
-        }
-        .btn-save {
-            border-radius: 4px;
-            padding: 15px;
-            background: $primary-black;
-            color: $primary-white;
-            font-size: 16px;
-            font-weight: 500;
-            font-family: $font-family;
-        }
-    }
-    .voucher-body{
-        padding-left: 0px;
-        padding-right: 0px;
-        .similar {
-            .voucher-container .voucher-image {
-                padding-top: 100% !important;
-            }
-        }
-    }
-}

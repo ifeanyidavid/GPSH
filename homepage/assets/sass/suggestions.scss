@@ -1,0 +1,65 @@
+@import "bourbon/bourbon";
+
+.search-wrapper, .search-container, .search-container-mobile{
+    position: relative;
+    .search-suggestions-wrapper{
+        background: rgba(0,0,0,0);
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        z-index: 3;
+        top: 64px !important;
+        box-shadow: 0 3px 20px rgba(156, 160, 171, 0.25) !important;
+        border-radius: 2px;
+        @include transition(all ease 0.3s);
+        @include padding(24px);
+
+        @media (max-width: 576px){
+            top: 55px;
+        }
+
+        .search-suggestions-wrapper--title{
+            font-size: 14px;
+            font-weight: 700;
+            color: rgba(0,0,0,0.87);
+        }
+        .search-suggestions-wrapper--description{
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(0,0,0,0.54);
+            border-radius: 2px;
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+            
+            @include transition(all ease 0.3s);
+            @include padding(8px);
+
+            @media (max-width: 576px){
+                font-size: 16px;
+            }
+            &:hover{
+                background: #eee;
+                text-decoration: none;
+            }
+        }
+
+        .branding > .powered-by{
+            font-size: 12px;
+            font-weight: normal;
+            color: rgba(0,0,0,0.54) !important;
+            text-transform: uppercase;
+            .algolia-logo{
+                font-weight: 700;
+            }
+        }
+    }   
+}
+
+.search-container, .search-container-mobile{
+    .search-suggestions-wrapper{
+        left: 11px;
+        top: 41px;
+        width: 100% !important;
+    }
+}

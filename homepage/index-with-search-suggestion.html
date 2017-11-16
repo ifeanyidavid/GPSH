@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#4a4a4a" />
     <title>Giftplush</title>
 
     <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
@@ -159,7 +160,7 @@
             </div>
         </div>
         <div class="modal-inner">
-            <label for="addToWishlist"><i class="la la-close"></i></label>
+            <label for="addToWishlist" class="closemodal" style="top: 12px !important;"><i class="la la-close"></i></label>
             <div class="container">
                 
                 <div class="row">
@@ -219,7 +220,7 @@
                     <label for="navmenutoggle" class="toggle mb-0 mr-3 d-xl-none">
                         <i class="la la-close"></i>                                    
                     </label>
-                    <a href="index_new.html" class="logo">Giftplush</a>
+                    <a href="index.html" class="logo">Giftplush</a>
                 </div>
             </div>
             <!-- <div class="row link">
@@ -266,7 +267,7 @@
     </div>
 
     <!-- NAVIGATION -->
-    <nav class="container-fluid navigation p-3 p-md-4 nav-fixed" role="navigtion">
+    <nav class="container-fluid navigation nav-fixed" role="navigtion">
         <div class="row align-items-center nav-home">
             <div class="col-12 col-md-4 col-xl-2 nav-left">
                 <div class="branding d-flex align-items-center">
@@ -274,25 +275,37 @@
                         <i class="la la-navicon"></i>
                         <i class="la la-close"></i>
                     </label>
-                    <a href="index_new.html" class="logo">Giftplush</a>
+                    <a href="index.html" class="logo">Giftplush</a>
                 </div>
             </div>
 
             <div class="col-4 w-100 search-container d-none d-xl-block">
                 <input type="text" name="searchbar" id="searchbar" placeholder="Search Giftplush" class="searchbar">    
                 <i class="la la-search"></i>
-                <div class="search-suggestions-wrapper">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12 search-suggestions-wrapper__recent-search">
-                                <h6 class="search-suggestions-wrapper__recent-search-container--title mb-4 d-none">Recent searches</h6>
-                                <h6 class="search-suggestions-wrapper__recent-search-container--title mb-0">No results</h6>
-                                <a href="#" class="search-suggestions-wrapper__recent-search-container--description d-none">Spar Vouchers</a>
-                                <a href="#" class="search-suggestions-wrapper__recent-search-container--description d-none">Shoprite Vouchers</a>
+                <span class="search-suggestions-wrapper with-1" role="listbox" id="d-block-listbox-0" style="position: absolute; z-index: 100; top: 64px; left: 0px; right: auto; display: block;">
+                    <div class="container-fluid b-1">
+                        <span class="row" style="display: block;">
+                            <div class="search-suggestions-wrapper--description" role="option" id="option-70195360">
+                                <em style="white-space: normal;">Te</em>lequip Ng
                             </div>
-                        </div>
+                            <div class="search-suggestions-wrapper--description" role="option" id="option-90065878">
+                                <em style="white-space: normal;">Te</em>lequip Ng
+                            </div>
+                            <div class="search-suggestions-wrapper--description" role="option" id="option-20356607">
+                                <em style="white-space: normal;">Te</em>lequip Ng
+                            </div>
+                            <div class="search-suggestions-wrapper--description" role="option" id="option-60415711">
+                                <em style="white-space: normal;">Te</em>lequip Ng
+                            </div>
+                            <div class="search-suggestions-wrapper--description" role="option" id="option-75559000">
+                                <em style="white-space: normal;">Te</em>lequip Ng
+                            </div>
+                        </span>
                     </div>
-                </div>   
+                    <div class="branding float-right">
+                       <a href="#" class="powered-by">powered by <span class="algolia-logo">algolia</span></a>
+                    </div>
+                </span>
             </div>
 
             <div class="col-5 push-1 nav-right d-xl-flex d-none align-items-center justify-content-between">
@@ -382,29 +395,41 @@
             <div class="col-12 col-md-8 search-container-mobile d-xl-none mt-3 mt-md-0">
                 <input type="text" name="searchbar" id="searchbar" class="searchbar-mobile" placeholder="Search Giftplush">
                 <i class="la la-search"></i>
-                <div class="search-suggestions-wrapper">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12 search-suggestions-wrapper__recent-search">
-                                <h6 class="search-suggestions-wrapper__recent-search-container--title mb-4 d-none">Recent searches</h6>
-                                <h6 class="search-suggestions-wrapper__recent-search-container--title mb-0">No results</h6>
-                                <a href="#" class="search-suggestions-wrapper__recent-search-container--description d-none">Spar Vouchers</a>
-                                <a href="#" class="search-suggestions-wrapper__recent-search-container--description d-none">Shoprite Vouchers</a>
+                <span class="search-suggestions-wrapper with-1" role="listbox" id="d-block-listbox-0" style="position: absolute; z-index: 100; top: 64px; left: 0px; right: auto; display: block;">
+                    <div class="container-fluid b-1">
+                        <span class="row" style="display: block;">
+                            <div class="search-suggestions-wrapper--description" role="option" id="option-70195360">
+                                <em style="white-space: normal;">Te</em>lequip Ng
                             </div>
-                        </div>
+                            <div class="search-suggestions-wrapper--description" role="option" id="option-90065878">
+                                <em style="white-space: normal;">Te</em>lequip Ng
+                            </div>
+                            <div class="search-suggestions-wrapper--description" role="option" id="option-20356607">
+                                <em style="white-space: normal;">Te</em>lequip Ng
+                            </div>
+                            <div class="search-suggestions-wrapper--description" role="option" id="option-60415711">
+                                <em style="white-space: normal;">Te</em>lequip Ng
+                            </div>
+                            <div class="search-suggestions-wrapper--description" role="option" id="option-75559000">
+                                <em style="white-space: normal;">Te</em>lequip Ng
+                            </div>
+                        </span>
                     </div>
-                </div> 
+                    <div class="branding float-right">
+                       <a href="#" class="powered-by">powered by <span class="algolia-logo">algolia</span></a>
+                    </div>
+                </span>
             </div>
         </div>
     </nav>
 
     <!-- HERO -->
-    <header class="header mt-200" role="heading"
+    <header class="header" role="heading">
         <section class="container hero">
             <div class="row">
                 <div class="col-12">
                     <div class="hero-text-wrapper">
-                        <h1>Vouchers for everything.</h1>
+                        <h1 class="hero-text-wrapper__heading">Vouchers for everything.</h1>
                         <div class="hero-text-wrapper__help-text">
                             <p>Explore from a wide range of digital vouchers</p>
                         </div>
@@ -417,18 +442,30 @@
                         <div class="input-group search-wrapper">
                             <input type="text" placeholder="Start searching" class="form-control search-wrapper__search-field w-100 h-100">
                             <i class="la la-search search-wrapper__search-icon"></i>
-                            <div class="search-suggestions-wrapper">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-12 search-suggestions-wrapper__recent-search">
-                                            <h6 class="search-suggestions-wrapper__recent-search-container--title mb-4 d-none">Recent searches</h6>
-                                            <h6 class="search-suggestions-wrapper__recent-search-container--title mb-0">No results</h6>
-                                            <a href="#" class="search-suggestions-wrapper__recent-search-container--description d-none">Spar Vouchers</a>
-                                            <a href="#" class="search-suggestions-wrapper__recent-search-container--description d-none">Shoprite Vouchers</a>
+                            <span class="search-suggestions-wrapper with-1" role="listbox" id="d-block-listbox-0" style="position: absolute; z-index: 100; top: 64px; left: 0px; right: auto; display: block;">
+                                <div class="container-fluid b-1">
+                                    <span class="row" style="display: block;">
+                                        <div class="search-suggestions-wrapper--description" role="option" id="option-70195360">
+                                            <em style="white-space: normal;">Te</em>lequip Ng
                                         </div>
-                                    </div>
+                                        <div class="search-suggestions-wrapper--description" role="option" id="option-90065878">
+                                            <em style="white-space: normal;">Te</em>lequip Ng
+                                        </div>
+                                        <div class="search-suggestions-wrapper--description" role="option" id="option-20356607">
+                                            <em style="white-space: normal;">Te</em>lequip Ng
+                                        </div>
+                                        <div class="search-suggestions-wrapper--description" role="option" id="option-60415711">
+                                            <em style="white-space: normal;">Te</em>lequip Ng
+                                        </div>
+                                        <div class="search-suggestions-wrapper--description" role="option" id="option-75559000">
+                                            <em style="white-space: normal;">Te</em>lequip Ng
+                                        </div>
+                                    </span>
                                 </div>
-                            </div>
+                                <div class="branding float-right">
+                                   <a href="#" class="powered-by">powered by <span class="algolia-logo">algolia</span></a>
+                                </div>
+                            </span>
                         </div>
                     </div>
                 </div>

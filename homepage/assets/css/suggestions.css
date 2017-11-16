@@ -1,0 +1,66 @@
+.search-wrapper, .search-container, .search-container-mobile {
+  position: relative;
+}
+.search-wrapper .search-suggestions-wrapper, .search-container .search-suggestions-wrapper, .search-container-mobile .search-suggestions-wrapper {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  z-index: 3;
+  top: 64px !important;
+  box-shadow: 0 3px 20px rgba(156, 160, 171, 0.25) !important;
+  border-radius: 2px;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  padding: 24px;
+}
+@media (max-width: 576px) {
+  .search-wrapper .search-suggestions-wrapper, .search-container .search-suggestions-wrapper, .search-container-mobile .search-suggestions-wrapper {
+    top: 55px;
+  }
+}
+.search-wrapper .search-suggestions-wrapper .search-suggestions-wrapper--title, .search-container .search-suggestions-wrapper .search-suggestions-wrapper--title, .search-container-mobile .search-suggestions-wrapper .search-suggestions-wrapper--title {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.87);
+}
+.search-wrapper .search-suggestions-wrapper .search-suggestions-wrapper--description, .search-container .search-suggestions-wrapper .search-suggestions-wrapper--description, .search-container-mobile .search-suggestions-wrapper .search-suggestions-wrapper--description {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.54);
+  border-radius: 2px;
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  padding: 8px;
+}
+@media (max-width: 576px) {
+  .search-wrapper .search-suggestions-wrapper .search-suggestions-wrapper--description, .search-container .search-suggestions-wrapper .search-suggestions-wrapper--description, .search-container-mobile .search-suggestions-wrapper .search-suggestions-wrapper--description {
+    font-size: 16px;
+  }
+}
+.search-wrapper .search-suggestions-wrapper .search-suggestions-wrapper--description:hover, .search-container .search-suggestions-wrapper .search-suggestions-wrapper--description:hover, .search-container-mobile .search-suggestions-wrapper .search-suggestions-wrapper--description:hover {
+  background: #eee;
+  text-decoration: none;
+}
+.search-wrapper .search-suggestions-wrapper .branding > .powered-by, .search-container .search-suggestions-wrapper .branding > .powered-by, .search-container-mobile .search-suggestions-wrapper .branding > .powered-by {
+  font-size: 12px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.54) !important;
+  text-transform: uppercase;
+}
+.search-wrapper .search-suggestions-wrapper .branding > .powered-by .algolia-logo, .search-container .search-suggestions-wrapper .branding > .powered-by .algolia-logo, .search-container-mobile .search-suggestions-wrapper .branding > .powered-by .algolia-logo {
+  font-weight: 700;
+}
+
+.search-container .search-suggestions-wrapper, .search-container-mobile .search-suggestions-wrapper {
+  left: 11px;
+  top: 41px;
+  width: 100% !important;
+}
+
+/*# sourceMappingURL=suggestions.css.map */

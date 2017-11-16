@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#4a4a4a" />
     <title>Giftplush</title>
 
     <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="assets/css/slider.min.css">
+    <link rel="stylesheet" href="assets/css/flickity.min.css">
 </head>
 
 <body>
@@ -152,7 +154,7 @@
     <div class="modalX wishlistModalX">
         <label for="addToWishlist" class="modal-bg"></label>
         <div class="modal-inner">
-            <label for="addToWishlist"><i class="la la-close"></i></label>
+            <label for="addToWishlist" class="closemodal" style="top: 12px !important;"><i class="la la-close"></i></label>
             <div class="container">
 
                 <div class="row">
@@ -212,7 +214,7 @@
                     <label for="navmenutoggle" class="toggle mb-0 mr-3 d-xl-none">
                         <i class="la la-close"></i>                                    
                     </label>
-                    <a href="index_new.html" class="logo">Giftplush</a>
+                    <a href="index.html" class="logo">Giftplush</a>
                 </div>
             </div>
             <div class="row link">
@@ -254,20 +256,20 @@
     </div>
 
      <!-- NAVIGATION -->
-    <nav class="container-fluid navigation p-3 p-md-4 nav-fixed nav-fixed--with-searchbar" role="navigation">
+    <nav class="container-fluid navigation nav-fixed nav-fixed--with-searchbar" role="navigation">
         <div class="row align-items-center nav-home">
-            <div class="col-12 col-md-4 col-xl-2 nav-left">
+            <div class="col-12 col-md-3 col-xl-2 nav-left">
                 <div class="branding d-flex align-items-center">
                     <label for="navmenutoggle" class="toggle mb-0 d-xl-none">
                         <i class="la la-navicon"></i>
                         <i class="la la-close"></i>
                     </label>
-                    <a href="index_new.html" class="logo">Giftplush</a>
+                    <a href="index.html" class="logo">Giftplush</a>
                 </div>
             </div>
 
             <div class="col-4 w-100 search-container d-none d-xl-block">
-                <input type="text" name="searchbar" id="searchbar" placeholder="Search Giftplush" class="searchbar">    
+                <input type="text" name="searchbar" id="searchbar" placeholder="Start searching" class="searchbar">    
                 <i class="la la-search"></i>              
             </div>
 
@@ -344,15 +346,14 @@
                 <label for="authModal" class="access d-flex align-items-center justify-content-center m-0">Sign in/Sign up</label>
             </div>
 
-            <div class="col-12 col-md-8 search-container-mobile d-xl-none mt-3 mt-md-0">
-                <input type="text" name="searchbar" id="searchbar" class="searchbar-mobile" placeholder="Search Giftplush">
+            <div class="col-12 col-md-9 search-container-mobile d-xl-none mt-3 mt-md-0">
+                <input type="text" name="searchbar" id="searchbar" class="searchbar-mobile" placeholder="Start searching">
                 <i class="la la-search"></i>
             </div>
         </div>
     </nav>
 
     <!-- CHECKOUT BODY WEB-->
-
     <main class="container checkout-container d-none d-md-block mt-100">
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-6 mr-auto left-col">
@@ -362,7 +363,7 @@
                             <div class="row mb-5">
                                 <div class="col-12 d-flex justify-content-between align-items-center">
                                     <h1 class="voucher-title">Prime Meats</h1>
-                                    <label for="vouchertowishlist" class="m-0 vouchertowishlist d-flex align-items-center text-nowrap">
+                                    <label for="addToWishlist" class="m-0 vouchertowishlist d-flex align-items-center text-nowrap">
                                         <i class="la la-heart mr-2"></i>
                                         Add to wishlist
                                     </label>
@@ -426,8 +427,8 @@
                 <section id="sticky-right-col">
                     <div class="checkout-form mt-5 p-md-3">
                         <div class="container">
-                            <div class="row">
-                                <div class="col-12 d-flex justify-content-between">
+                            <div class="row mb-4">
+                                <div class="col-12 d-flex justify-content-between align-items-center">
                                     <h1 class="price m-0"><span class="currency">NGN</span> 10,000</h1>
                                     <button type="submit" class="btn btn-book btn-book-top w-50">Book voucher</button>
                                 </div>
@@ -577,7 +578,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-3">
+                            <div class="row mt-5">
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-book w-100">Book voucher</button>
                                     <small class="form-text text-muted text-center mt-3">You won't be charged yet</small>
@@ -588,89 +589,123 @@
                 </section>
             </div>
         </div>
-
-        <div class="voucher-body">
-            <div class="voucher-section my-5 similar">
-                <div class="row mb-4">
-                    <div class="col-12">
-                        <div class="section-heading d-flex justify-content-between align-items-center">
-                            <h1 style="font-size: 24px; font-weight: 500; margin-top: 48px">Similar vouchers</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 col-md-3 voucher-container">
-                        <a href="#" class="voucher">
-                            <div>
-                                <div class="voucher-image">
-                                    <label for="addToWishlist" class="addToWishlist">
-                                                                                            <i class="la la-heart"></i>
-                                                                                        </label>
-                                </div>
-                                <div class="voucher-name">
-                                    <h3>Flaming grills voucher</h3>
-                                </div>
-                                <div class="voucher-desc">
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-3 voucher-container">
-                        <a href="#" class="voucher">
-                            <div>
-                                <div class="voucher-image">
-                                    <label for="addToWishlist" class="addToWishlist">
-                                                                                            <i class="la la-heart"></i>
-                                                                                        </label>
-                                </div>
-                                <div class="voucher-name">
-                                    <h3>Interflora voucher</h3>
-                                </div>
-                                <div class="voucher-desc">
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-3 voucher-container">
-                        <a href="#" class="voucher">
-                            <div>
-                                <div class="voucher-image">
-                                    <label for="addToWishlist" class="addToWishlist">
-                                                                                            <i class="la la-heart"></i>
-                                                                                        </label>
-                                </div>
-                                <div class="voucher-name">
-                                    <h3>Cineworld voucher</h3>
-                                </div>
-                                <div class="voucher-desc">
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-3 voucher-container">
-                        <a href="#" class="voucher">
-                            <div>
-                                <div class="voucher-image">
-                                    <label for="addToWishlist" class="addToWishlist">
-                                                                                            <i class="la la-heart"></i>
-                                                                                        </label>
-                                </div>
-                                <div class="voucher-name">
-                                    <h3>Matalan voucher</h3>
-                                </div>
-                                <div class="voucher-desc">
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
-                                </div>
-                            </div>
-                        </a>
+        
+        <div class="voucher-section mb-5">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="section-heading d-flex justify-content-between align-items-center">
+                        <h1>Similar experiences</h1>
                     </div>
                 </div>
             </div>
+            <div class="voucher-row similar" data-flickity='{"cellAlign":"center", "freeScroll":false, "pageDots":false, "selectedAttraction":0.4, "friction":1, "groupCells":"80%", "draggable":"Modernizr.touchevents", "contain":true}'>
+                <div class="carousel-cell voucher-container">
+                    <a href="#" class="voucher">
+                        <div class="voucher-image image-1">
+                            <label for="addToWishlist" class="addToWishlist">
+                                <i class="la la-heart"></i>
+                            </label>
+                        </div>
+                        <div class="voucher-details__wrapper">
+                            <div class="voucher-name">
+                                Hong Kong Disneyland Meal Coupon
+                            </div>
+                            <div class="voucher-tags">
+                                <p class="v-tag">Food tasting</p>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>$83 per person</p>
+                                <span class="total-bought">10K+ bought</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-cell voucher-container">
+                    <a href="#" class="voucher">
+                        <div class="voucher-image image-2">
+                            <label for="addToWishlist" class="addToWishlist">
+                                <i class="la la-heart"></i>
+                            </label>
+                        </div>
+                        <div class="voucher-details__wrapper">
+                            <div class="voucher-name">
+                                Hong Kong Disneyland Meal Coupon
+                            </div>
+                            <div class="voucher-tags">
+                                <p class="v-tag">Food tasting</p>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>$83 per person</p>
+                                <span class="total-bought">10K+ bought</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-cell voucher-container">
+                    <a href="#" class="voucher">
+                        <div class="voucher-image image-3">
+                            <label for="addToWishlist" class="addToWishlist">
+                                <i class="la la-heart"></i>
+                            </label>
+                        </div>
+                        <div class="voucher-details__wrapper">
+                            <div class="voucher-name">
+                                Hong Kong Disneyland Meal Coupon
+                            </div>
+                            <div class="voucher-tags">
+                                <p class="v-tag">Food tasting</p>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>$83 per person</p>
+                                <span class="total-bought">10K+ bought</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-cell voucher-container">
+                    <a href="#" class="voucher">
+                        <div class="voucher-image image-4">
+                            <label for="addToWishlist" class="addToWishlist">
+                                <i class="la la-heart"></i>
+                            </label>
+                        </div>
+                        <div class="voucher-details__wrapper">
+                            <div class="voucher-name">
+                                Hong Kong Disneyland Meal Coupon
+                            </div>
+                            <div class="voucher-tags">
+                                <p class="v-tag">Food tasting</p>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>$83 per person</p>
+                                <span class="total-bought">10K+ bought</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-cell voucher-container">
+                    <a href="#" class="voucher">
+                        <div class="voucher-image image-5">
+                            <label for="addToWishlist" class="addToWishlist">
+                                <i class="la la-heart"></i>
+                            </label>
+                        </div>
+                        <div class="voucher-details__wrapper">
+                            <div class="voucher-name">
+                                Hong Kong Disneyland Meal Coupon
+                            </div>
+                            <div class="voucher-tags">
+                                <p class="v-tag">Food tasting</p>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>$83 per person</p>
+                                <span class="total-bought">10K+ bought</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>    
         </div>
-
     </main>
 
     <!-- CHECKOUT MOBILE -->
@@ -745,86 +780,121 @@
             </footer>
         </div>
         
-        <div class="voucher-body">
-            <div class="voucher-section my-5 similar">
-                <div class="row mb-4">
-                    <div class="col-12">
-                        <div class="section-heading d-flex justify-content-between align-items-center">
-                            <h1 style="font-size: 24px; font-weight: 500; margin-top: 48px">Similar vouchers</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 col-md-3 voucher-container">
-                        <a href="#" class="voucher">
-                            <div>
-                                <div class="voucher-image">
-                                    <label for="addToWishlist" class="addToWishlist">
-                                                                <i class="la la-heart"></i>
-                                                            </label>
-                                </div>
-                                <div class="voucher-name">
-                                    <h3>Flaming grills voucher</h3>
-                                </div>
-                                <div class="voucher-desc">
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-3 voucher-container">
-                        <a href="#" class="voucher">
-                            <div>
-                                <div class="voucher-image">
-                                    <label for="addToWishlist" class="addToWishlist">
-                                                                <i class="la la-heart"></i>
-                                                            </label>
-                                </div>
-                                <div class="voucher-name">
-                                    <h3>Interflora voucher</h3>
-                                </div>
-                                <div class="voucher-desc">
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-3 voucher-container">
-                        <a href="#" class="voucher">
-                            <div>
-                                <div class="voucher-image">
-                                    <label for="addToWishlist" class="addToWishlist">
-                                                                <i class="la la-heart"></i>
-                                                            </label>
-                                </div>
-                                <div class="voucher-name">
-                                    <h3>Cineworld voucher</h3>
-                                </div>
-                                <div class="voucher-desc">
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-6 col-md-3 voucher-container">
-                        <a href="#" class="voucher">
-                            <div>
-                                <div class="voucher-image">
-                                    <label for="addToWishlist" class="addToWishlist">
-                                                                <i class="la la-heart"></i>
-                                                            </label>
-                                </div>
-                                <div class="voucher-name">
-                                    <h3>Matalan voucher</h3>
-                                </div>
-                                <div class="voucher-desc">
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quaerat</p>
-                                </div>
-                            </div>
-                        </a>
+        <div class="voucher-section mb-5">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="section-heading d-flex justify-content-between align-items-center">
+                        <h1>Similar experiences</h1>
                     </div>
                 </div>
             </div>
+            <div class="voucher-row similar" data-flickity='{"cellAlign":"center", "freeScroll":false, "pageDots":false, "selectedAttraction":0.4, "friction":1, "groupCells":"80%", "draggable":"Modernizr.touchevents", "contain":true}'>
+                <div class="carousel-cell voucher-container">
+                    <a href="#" class="voucher">
+                        <div class="voucher-image image-1">
+                            <label for="addToWishlist" class="addToWishlist">
+                                <i class="la la-heart"></i>
+                            </label>
+                        </div>
+                        <div class="voucher-details__wrapper">
+                            <div class="voucher-name">
+                                Hong Kong Disneyland Meal Coupon
+                            </div>
+                            <div class="voucher-tags">
+                                <p class="v-tag">Food tasting</p>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>$83 per person</p>
+                                <span class="total-bought">10K+ bought</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-cell voucher-container">
+                    <a href="#" class="voucher">
+                        <div class="voucher-image image-2">
+                            <label for="addToWishlist" class="addToWishlist">
+                                <i class="la la-heart"></i>
+                            </label>
+                        </div>
+                        <div class="voucher-details__wrapper">
+                            <div class="voucher-name">
+                                Hong Kong Disneyland Meal Coupon
+                            </div>
+                            <div class="voucher-tags">
+                                <p class="v-tag">Food tasting</p>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>$83 per person</p>
+                                <span class="total-bought">10K+ bought</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-cell voucher-container">
+                    <a href="#" class="voucher">
+                        <div class="voucher-image image-3">
+                            <label for="addToWishlist" class="addToWishlist">
+                                <i class="la la-heart"></i>
+                            </label>
+                        </div>
+                        <div class="voucher-details__wrapper">
+                            <div class="voucher-name">
+                                Hong Kong Disneyland Meal Coupon
+                            </div>
+                            <div class="voucher-tags">
+                                <p class="v-tag">Food tasting</p>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>$83 per person</p>
+                                <span class="total-bought">10K+ bought</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-cell voucher-container">
+                    <a href="#" class="voucher">
+                        <div class="voucher-image image-4">
+                            <label for="addToWishlist" class="addToWishlist">
+                                <i class="la la-heart"></i>
+                            </label>
+                        </div>
+                        <div class="voucher-details__wrapper">
+                            <div class="voucher-name">
+                                Hong Kong Disneyland Meal Coupon
+                            </div>
+                            <div class="voucher-tags">
+                                <p class="v-tag">Food tasting</p>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>$83 per person</p>
+                                <span class="total-bought">10K+ bought</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-cell voucher-container">
+                    <a href="#" class="voucher">
+                        <div class="voucher-image image-5">
+                            <label for="addToWishlist" class="addToWishlist">
+                                <i class="la la-heart"></i>
+                            </label>
+                        </div>
+                        <div class="voucher-details__wrapper">
+                            <div class="voucher-name">
+                                Hong Kong Disneyland Meal Coupon
+                            </div>
+                            <div class="voucher-tags">
+                                <p class="v-tag">Food tasting</p>
+                            </div>
+                            <div class="voucher-desc">
+                                <p>$83 per person</p>
+                                <span class="total-bought">10K+ bought</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>    
         </div>
 
         <input type="checkbox" name="customise-voucher" id="customise-voucher">
@@ -1107,6 +1177,7 @@
 
     <script src="assets/js/zxcvbn.js"></script>
     <script src="assets/js/stickybits.js"></script>
+    <script src="assets/js/flickity.pkgd.min.js"></script>
     <script>
         var strength = {
             0: "Worst",
